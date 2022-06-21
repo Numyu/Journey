@@ -26,6 +26,7 @@
 
 .most-viewed-content {
     margin: 18px 16px 0 16px;
+    border: solid;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr auto;
@@ -76,6 +77,7 @@ button {
     position: absolute;
     grid-column: 1;
     grid-row: 1;
+    margin-bottom: 19px;
 
 
 }
@@ -83,7 +85,7 @@ button {
 .louvre-museum-card {
     display: flex;
     flex-direction: row-reverse;
-    margin-bottom: 16px;
+
     grid-column: 1;
     grid-row-end: 1;
     margin: 0 0 2px 0;
@@ -102,6 +104,7 @@ button {
 .sacre-coeurs-basilica {
     grid-column: 1;
     grid-row: 2;
+
 }
 
 .eiffel-tower-card button {
@@ -147,4 +150,11 @@ button {
     border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
     margin-top: 17px;
+}
+
+
+@media screen and (max-width: 375px) {
+
+    /* insert responsives values */
+
 }
