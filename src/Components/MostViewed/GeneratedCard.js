@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function ItemCard(props) {
+export default function GeneratedCard(props) {
     return (
 
         <>
