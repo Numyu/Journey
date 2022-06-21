@@ -3,19 +3,41 @@
     src: url('../../font/ClashDisplay_Complete/Fonts/Variable/ClashDisplay-Variable.ttf');
 }
 
+.title-subtitle {
+    margin: 113px 0 0 16px;
+}
+
+.title {
+    font-size: 20px;
+    font-family: articulat-cf, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+.subtitle {
+    font-size: 14px;
+    font-family: articulat-cf, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 19px;
+
+}
 
 .most-viewed-content {
     margin: 18px 16px 0 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
 }
-
 
 button {
     cursor: pointer;
 }
 
+.card-mosaic:hover {
+    background-color: aqua;
+}
 
 .eiffel-tower-card,
 .louvre-museum-card,
@@ -25,27 +47,41 @@ button {
     font-family: articulat-cf, sans-serif;
     font-weight: 800;
     font-style: normal;
+
+
 }
 
-/* .eiffel-tower-card {
+.eiffel-tower-card {
 
-    grid-row-start: 1;
-    grid-row-end: 2;
-} */
+    grid-column: 1;
+    grid-row: 1;
+}
 
-/* .louvre-museum-card {
+.louvre-museum-card {
+    display: flex;
+    flex-direction: row-reverse;
 
-    grid-row-start: 1;
-    grid-row-end: 1
-} */
+    margin-bottom: 16px;
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0 0 19px 0;
 
-/* .triumph-arch-card {
-    grid-column: 2;
-} */
 
-/* .sacre-coeurs-basilica {
+}
+
+.triumph-arch-card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0 0 2px 0;
+}
+
+.sacre-coeurs-basilica {
+    grid-column: 1;
     grid-row: 2;
-}  */
+}
 
 .eiffel-tower-card button {
 
@@ -56,22 +92,19 @@ button {
     border: none;
     border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
-}
 
+}
 
 .louvre-museum-card button {
 
     background: url('../../img/MostViewedImg/louvre-museum.png') no-repeat center;
     background-size: cover;
     width: 231px;
-    height: 134px;
+    height: 130px;
     border: none;
     border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
-
-
-
 
 .triumph-arch-card button {
     background: url('../../img/MostViewedImg/triumph-arch.png') no-repeat center;
@@ -81,6 +114,7 @@ button {
     border: none;
     border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+
 }
 
 .sacre-coeurs-basilica button {
@@ -91,4 +125,5 @@ button {
     border: none;
     border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 17px;
 }
