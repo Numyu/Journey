@@ -26,7 +26,6 @@
 
 .most-viewed-content {
     margin: 18px 16px 0 16px;
-    border: solid;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr auto;
