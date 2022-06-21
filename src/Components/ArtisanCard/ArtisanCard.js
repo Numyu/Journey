@@ -13,7 +13,6 @@ export default function ArtisanCard({shopName, shopDetail, shopDescription, open
     className={cardToggled ? "artisan-card toggled" : "artisan-card"}
     onClick={toggledCardDescription}
     >
-        div.
 
     </div>
   )
