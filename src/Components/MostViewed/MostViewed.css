@@ -1,0 +1,33 @@
+.EiffelTowerCard {
+    background: url('../../img/MostViewedImg/eiffel.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border: none;
+}
+
+
+.LouvreMuseumCard {
+    background: url('../../img/MostViewedImg/louvre-museum.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border: none;
+}
+
+
+.TriumphArchCard {
+    background: url('../../img/MostViewedImg/triumph-arch.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border: none;
+}
+
+.SacreCoeursBasilica {
+    background: url('../../img/MostViewedImg/sacre-coeur-basilica.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    border: none;
+}
