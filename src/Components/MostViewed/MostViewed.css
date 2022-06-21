@@ -28,16 +28,15 @@
     margin: 18px 16px 0 16px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr auto;
+    width: 396px;
 }
 
 button {
     cursor: pointer;
 }
 
-.card-mosaic:hover {
-    background-color: aqua;
-}
+
 
 .eiffel-tower-card,
 .louvre-museum-card,
@@ -60,11 +59,10 @@ button {
 .louvre-museum-card {
     display: flex;
     flex-direction: row-reverse;
-
     margin-bottom: 16px;
     grid-row: 1;
     grid-column: 1;
-    margin: 0 0 19px 0;
+
 
 
 }

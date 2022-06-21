@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import ItemCard from './ItemCard'
 import './MostViewed.css'
 
@@ -11,10 +12,10 @@ export default function MostViewed() {
 
     // Liste des cartes dans la section 'Most Viewed'
     const [cardItem, setCard] = useState([
-        { id: 1, title: 'Eiffel Tower', classCard: 'eiffel-tower-card', img: '../../img/MostViewedImg/eiffel.png' },
-        { id: 2, title: 'Louvre Museum', classCard: 'louvre-museum-card', img: '../../img/MostViewedImg/eiffel.png' },
-        { id: 3, title: 'Triumph Arch', classCard: 'triumph-arch-card', img: '../../img/MostViewedImg/eiffel.png' },
-        { id: 4, title: 'Sacré-Coeur’s Basilica', classCard: 'sacre-coeurs-basilica', img: '../../img/MostViewedImg/eiffel.png' }
+        { id: uuidv4(), title: 'Eiffel Tower', classCard: 'eiffel-tower-card', img: '../../img/MostViewedImg/eiffel.png' },
+        { id: uuidv4(), title: 'Louvre Museum', classCard: 'louvre-museum-card', img: '../../img/MostViewedImg/eiffel.png' },
+        { id: uuidv4(), title: 'Triumph Arch', classCard: 'triumph-arch-card', img: '../../img/MostViewedImg/eiffel.png' },
+        { id: uuidv4(), title: 'Sacré-Coeur’s Basilica', classCard: 'sacre-coeurs-basilica', img: '../../img/MostViewedImg/eiffel.png' }
     ])
 
     // Fonction de redirection vers la page catégorie
@@ -22,6 +23,7 @@ export default function MostViewed() {
         // Retourne l'id de l'élément séléctionné
         console.log(id)
     }
+
 
     return (
         <>
