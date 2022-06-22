@@ -1,0 +1,43 @@
+.itinerary-card {
+    width: 396px;
+    height: 134px;
+    border-radius: 4px;
+
+    margin-top: 15px;
+    margin-left: 50px;
+    background-color: grey;
+
+    font-family: articulat-cf, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itinerary-content {
+    width: 368px;
+    height: 106px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* background: crimson; */
+
+}
+
+.itinerary-category {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.itinerary-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.itinerary-description {
+    font-size: 14px;
+    font-weight: medium;
+}
