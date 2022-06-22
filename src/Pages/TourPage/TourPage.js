@@ -10,6 +10,7 @@ export default function TourPage() {
     setStores(data);
   }, [stores]);
 
+    
   console.log(stores);
 
   return (
