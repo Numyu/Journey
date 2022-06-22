@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ArtisanCard.css";
 
 export default function ArtisanCard({
@@ -6,7 +6,8 @@ export default function ArtisanCard({
   shopDetail,
   shopDescription,
   openingHours,
-  picture
+  picture, 
+  isDragged
 }) {
   const [cardToggled, setCardToggled] = useState(false);
 
@@ -14,15 +15,17 @@ export default function ArtisanCard({
     setCardToggled(!cardToggled);
   };
 
+
   return (
     <div
       className={cardToggled ? "artisan-card toggled" : "artisan-card"}
       onClick={toggledCardDescription}
     >
+      
       <div
-        className={cardToggled ? "artisan-card-header toggled" : "artisan-card-header"}
+        className={`${cardToggled ? "artisan-card-header toggled" : "artisan-card-header" } ${isDragged && "dragged"}`}
         style={{
-          backgroundImage: `url(${picture})`,
+          backgroundImage: `url(${picture})`
         }}
       >
         <p className={cardToggled ? "artisan-opening-hours toggled" : "artisan-opening-hours"}>{openingHours}</p>

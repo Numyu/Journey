@@ -1,4 +1,5 @@
 .artisan-card {
+    user-select: none;
     cursor: pointer;
     position: relative;
     width: 396px;
@@ -29,6 +30,10 @@
 
     /* background à supprimer quand on aura les images dans l'API */
     background-color: darkslategray;
+}
+
+.dragged {
+    background-color: red   ;
 }
 
 .artisan-card-header.toggled {
