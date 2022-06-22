@@ -1,20 +1,43 @@
 import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
+import FiltersButton from "../../Components/FiltersButton/FiltersButton";
 import data from "../../data/data.json";
 // import ArtisanCard from "../Components/ArtisanCard/ArtisanCard";
 
 export default function TourPage() {
   const [stores, setStores] = useState([]);
 
+  const [filters, setFilters] = useState([
+    {category:"Restaurant ou traiteur"},
+    {category:"Artisanat d'art"},
+    {category:"Librairie"},
+    {category:"Autre"}
+    
+]);
+
   useEffect(() => {
     setStores(data);
   }, [stores]);
 
-    
+  
   console.log(stores);
+  // "Restaurant ou traiteur"
+  // "Artisanat d'art"
+  // "Boucherie - charcuterie - rôtisserie"
+  // "Librairie"
 
   return (
+
     <div>
+      {filters.map((filter,index) => {
+        return (
+          <FiltersButton
+          key={index}
+          category={filter.category}
+          />
+        )
+      })}
+
       {stores
         // .slice(0,2)
         .map(
@@ -40,6 +63,7 @@ export default function TourPage() {
             />
           )
         )}
+      
     </div>
   );
 }

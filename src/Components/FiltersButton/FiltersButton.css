@@ -1,0 +1,20 @@
+.filter-button {
+    width: 100px;
+    height: 20px;
+    border: 2px solid darkslategray;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: articulat-cf,sans-serif;
+    
+}
+
+.filter-button:hover {
+    cursor: pointer;
+    background-color: darkslategray;
+    color: white;
+
+}
