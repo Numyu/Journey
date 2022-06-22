@@ -13,8 +13,8 @@ export default function MostViewed() {
     // Liste des cartes dans la section 'Most Viewed'
     const [cardItem, setCard] = useState([
         { id: uuidv4(), title: 'Eiffel Tower', classCard: 'eiffel-tower-card', img: '../../img/MostViewedImg/eiffel.png' },
-        { id: 1, title: 'Louvre Museum', classCard: 'louvre-museum-card', img: '../../img/MostViewedImg/eiffel.png' },
-        { id: 2, title: 'Triumph Arch', classCard: 'triumph-arch-card', img: '../../img/MostViewedImg/eiffel.png' },
+        { id: uuidv4(), title: 'Louvre Museum', classCard: 'louvre-museum-card', img: '../../img/MostViewedImg/eiffel.png' },
+        { id: uuidv4(), title: 'Triumph Arch', classCard: 'triumph-arch-card', img: '../../img/MostViewedImg/eiffel.png' },
         { id: uuidv4(), title: 'Sacré-Coeur’s Basilica', classCard: 'sacre-coeurs-basilica', img: '../../img/MostViewedImg/eiffel.png' }
     ])
 
@@ -37,10 +37,10 @@ export default function MostViewed() {
 
 
                 {
-                    cardItem.map((card, index) => {
+                    cardItem.map((card) => {
                         return (
                             <GeneratedCard
-                                Key={index}
+                                Key={card.id}
                                 classCard={card.classCard}
                                 img={card.img}
                                 title={card.title}
