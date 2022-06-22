@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FiltersButton.css"
-import { useState } from 'react';
+
 
 export default function FiltersButton(props) {
 
@@ -8,7 +8,7 @@ export default function FiltersButton(props) {
 
 
   return (
-    <div className='filter-button'>
+    <div className='filter-button' onClick={() => props.getCat(props.category)}>
         <p>{props.category}</p>
     </div>
   )

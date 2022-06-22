@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
 import FiltersButton from "../../Components/FiltersButton/FiltersButton";
 import data from "../../data/data.json";
+import "./TourPage.css"
 // import ArtisanCard from "../Components/ArtisanCard/ArtisanCard";
 
 export default function TourPage() {
@@ -19,6 +20,10 @@ export default function TourPage() {
     setStores(data);
   }, [stores]);
 
+  const getFilterCategory = category => {
+    console.log(category);
+  }
+
   
   console.log(stores);
   // "Restaurant ou traiteur"
@@ -29,14 +34,18 @@ export default function TourPage() {
   return (
 
     <div>
-      {filters.map((filter,index) => {
-        return (
-          <FiltersButton
-          key={index}
-          category={filter.category}
-          />
-        )
-      })}
+      <div className='flex-row'>
+        {filters.map((filter,index) => {
+          return (
+            <FiltersButton
+            key={index}
+            category={filter.category}
+            getCat={getFilterCategory}
+            />
+          )
+        })}
+      </div>
+      
 
       {stores
         // .slice(0,2)
