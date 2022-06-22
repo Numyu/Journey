@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./ArtisanCard.css";
 
+
 export default function ArtisanCard({
   shopName,
   shopDetail,
   shopDescription,
   openingHours,
   picture, 
-  isDragged
+  isDragged, 
+  onDrag,
+  onDragStart, 
+  onDragEnd
 }) {
   const [cardToggled, setCardToggled] = useState(false);
 
@@ -23,10 +27,14 @@ export default function ArtisanCard({
     >
       
       <div
-        className={`${cardToggled ? "artisan-card-header toggled" : "artisan-card-header" } ${isDragged && "dragged"}`}
+        className={cardToggled ? "artisan-card-header toggled" : "artisan-card-header"}
         style={{
           backgroundImage: `url(${picture})`
         }}
+        draggable
+        onDrag={onDrag}
+        onDragStart={onDragStart}
+        onDragEnd={onDragEnd}
       >
         <p className={cardToggled ? "artisan-opening-hours toggled" : "artisan-opening-hours"}>{openingHours}</p>
         <div className="artisan-card-shop-block">

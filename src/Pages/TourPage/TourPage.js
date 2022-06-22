@@ -64,13 +64,6 @@ export default function TourPage() {
             },
             recordid,
           }) => (
-            <div
-              draggable
-              onDrag={dragItem}
-              onDragStart={dragStartItem}
-              onDragEnd={dragEndItem}
-              key={recordid}
-            >
               <ArtisanCard
                 key={recordid}
                 shopName={nom_du_commerce}
@@ -80,8 +73,11 @@ export default function TourPage() {
                   description ? description : "Il n'y a pas de description"
                 }
                 type_de_commerce={type_de_commerce}
+                draggable
+                onDrag={dragItem}
+                onDragStart={dragStartItem}
+                onDragEnd={dragEndItem}
               />
-            </div>
           )
         )}
     </div>
