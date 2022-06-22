@@ -7,6 +7,7 @@ import "./TourPage.css"
 
 export default function TourPage() {
   const [stores, setStores] = useState([]);
+  const [filteredStores, setFilteredStores] = useState([])
 
   const [filters, setFilters] = useState([
     {category:"Restaurant ou traiteur"},
@@ -18,11 +19,20 @@ export default function TourPage() {
 
   useEffect(() => {
     setStores(data);
-  }, [stores]);
-
+    setFilteredStores(data)
+  }, []);
+ 
   const getFilterCategory = category => {
     console.log(category);
+    const filteredState = filteredStores.filter(item => {
+      
+      return item.fields.type_de_commerce == category
+    })
+    console.log(filteredState);
+    setStores(filteredState)
+    
   }
+
 
   
   console.log(stores);
