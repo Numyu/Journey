@@ -20,7 +20,7 @@ export default function ArtisanCard({
       onClick={toggledCardDescription}
     >
       <div
-        className="artisan-card-header"
+        className={cardToggled ? "artisan-card-header toggled" : "artisan-card-header"}
         style={{
           backgroundImage: `url(${picture})`,
         }}
