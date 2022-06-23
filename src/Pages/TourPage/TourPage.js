@@ -7,9 +7,9 @@ export default function TourPage() {
 
   useEffect(() => {
     setStores(data);
-  }, [stores]);
+  }, [  ]);
 
-  // console.log(stores);
+  console.log(stores);
 
   const [mouseStartPos, setMouseStartPos] = useState({});
   const [mousePos, setMousePos] = useState({});
@@ -27,9 +27,11 @@ export default function TourPage() {
   };
 
   const dragItem = (e) => {
-    if(isDragged)
-    {
-      e.target.classList.add("dragged");    }
+    console.log("yo");
+
+    if (isDragged) {
+      e.target.classList.add("dragged");
+    }
     setMousePos({ mouseX: e.clientX, mouseY: e.clientY });
   };
 
@@ -48,6 +50,13 @@ export default function TourPage() {
     }
   }, [mousePos]);
 
+  const deleteArtisanCard = (recordid) => {
+    const newStores = stores.filter((store) => {
+      return store.recordid != recordid;
+    });
+    setStores(newStores);
+  };
+
   return (
     <div>
       {stores
@@ -63,20 +72,21 @@ export default function TourPage() {
             },
             recordid,
           }) => (
-              <ArtisanCard
-                key={recordid}
-                shopName={nom_du_commerce}
-                shopDetail={adresse}
-                openingHours={code_postal}
-                shopDescription={
-                  description ? description : "Il n'y a pas de description"
-                }
-                type_de_commerce={type_de_commerce}
-                draggable
-                onDrag={dragItem}
-                onDragStart={dragStartItem}
-                onDragEnd={dragEndItem}
-              />
+            <ArtisanCard
+              key={recordid}
+              recordid={recordid}
+              shopName={nom_du_commerce}
+              shopDetail={adresse}
+              openingHours={code_postal}
+              shopDescription={
+                description ? description : "Il n'y a pas de description"
+              }
+              type_de_commerce={type_de_commerce}
+              draggable
+              onDrag={dragItem}
+              onDragStart={dragStartItem}
+              deleteArtisanCard={deleteArtisanCard}
+            />
           )
         )}
     </div>

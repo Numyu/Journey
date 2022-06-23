@@ -9,10 +9,11 @@ export default function ArtisanCard({
   shopDescription,
   openingHours,
   picture, 
-  isDragged, 
   onDrag,
   onDragStart, 
-  onDragEnd
+  onDragEnd,
+  deleteArtisanCard,
+  recordid
 }) {
   const [cardToggled, setCardToggled] = useState(false);
 
@@ -20,10 +21,10 @@ export default function ArtisanCard({
     setCardToggled(!cardToggled);
   };
 
-
   return (
     <div
       className={cardToggled ? "artisan-card toggled" : "artisan-card"}
+       
     >
       <div className="artisan-header-wrapper">
 
@@ -44,7 +45,11 @@ export default function ArtisanCard({
             <p className="artisan-card-detail">{shopDetail}</p>
           </div>
         </div>
-        <div className={cardToggled ? "artisan-card-delete toggled" : "artisan-card-delete"}>
+
+        <div 
+        className={cardToggled ? "artisan-card-delete toggled" : "artisan-card-delete"}
+        onClick={() => deleteArtisanCard(recordid)}
+        >
             <img src={Trash} alt="trash-delete" className="trash-icon"/>
         </div>
       </div>
