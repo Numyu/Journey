@@ -1,0 +1,25 @@
+.itinerary-page-container {
+    font-family: articulat-cf, sans-serif;
+    margin: 0 16px 0 16px;
+}
+
+.cta-back {
+    margin: 50px 0 32px 20px;
+    background: none;
+    border: none;
+}
+
+.itinerary-page-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.itinerary-page-text {
+    margin: 19px 0 0 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.filter-title {
+    margin: 50px 0 34px 0;
+}

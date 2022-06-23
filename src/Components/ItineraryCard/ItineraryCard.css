@@ -1,13 +1,17 @@
+/* .itinerary-container {
+    background: orange;
+    width: 100%;
+} */
+
 .itinerary-card {
-    width: 396px;
+    width: auto;
     height: 134px;
     border-radius: 4px;
-
     margin-top: 15px;
-    margin-left: 50px;
-    background-color: grey;
 
-    font-family: articulat-cf, sans-serif;
+    background-color: grey;
+    background-size: cover;
+    background-position: center;
 
     display: flex;
     justify-content: center;
@@ -15,15 +19,16 @@
 }
 
 .itinerary-content {
-    width: 368px;
+    width: 100%;
     height: 106px;
+    margin: 0 14px 0 14px;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    /* background: crimson; */
-
+    color: white;
 }
 
 .itinerary-category {
@@ -41,3 +46,5 @@
     font-size: 14px;
     font-weight: medium;
 }
+
+
