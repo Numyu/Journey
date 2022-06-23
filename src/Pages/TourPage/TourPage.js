@@ -22,15 +22,14 @@ export default function TourPage() {
   };
 
   const dragEndItem = (e) => {
-    e.target.classList.remove("dragged");
+    // e.target.classList.remove("dragged");
     setMouseStartPos({ mouseX: e.clientX, mouseY: e.clientY });
   };
 
   const dragItem = (e) => {
     if(isDragged)
     {
-      e.target.classList.add("dragged");
-    }
+      e.target.classList.add("dragged");    }
     setMousePos({ mouseX: e.clientX, mouseY: e.clientY });
   };
 

@@ -28,6 +28,7 @@
     gap: 40px;
     color: #fff;
     border-radius: 4px;
+    cursor: pointer;
 
     /* background à supprimer quand on aura les images dans l'API */
     background-color: darkslategray;
@@ -39,6 +40,33 @@
     /* background-color: red   ; */
 }
 
+/* J AI RAJOUTE ICI */
+/* .artisan-header-wrapper {
+    display: flex;
+    flex-direction: row;
+} */
+
+.artisan-card-delete {
+    width: 100px;
+    height: 122px;
+    position: relative;
+    top: -122px;
+    left: 294px;
+    z-index: -1 ;
+    border-radius: 4px;
+    background-color: #EA5E5E;
+}
+
+.trash-icon {
+    padding: 50px 50px;
+}
+
+.artisan-card-delete.toggled {
+    display: none;
+
+}
+
+/* FIN DE L AJOUT CI DESSUS */
 .artisan-card-header.toggled {
     border-radius: 4px 4px 0px 0px;
 }
