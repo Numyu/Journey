@@ -46,7 +46,7 @@ export default function SearchBar() {
           .includes(inputValue.toLowerCase())
       ) {
         console.log(element);
-        result.push(element.fields.nom_du_commerce);
+        result.push(element);
       }
     });
     setApiValue(result);
@@ -55,6 +55,10 @@ export default function SearchBar() {
 
   const take_value = (e) => {
     setInputValue(e);
+  };
+  const nav = (id) => {
+    // Retourne l'id de l'élément séléctionné
+    console.log(id);
   };
 
   return (
@@ -68,10 +72,19 @@ export default function SearchBar() {
           value={inputValue}
         ></input>
         <button className="magnifying-glass">{svg_magnifying_glass} </button>
-        {apiValue.map((item, index) => {
-          return <ResultsSearch key={index} name={item} />;
-        })}
       </form>
+      <div className="autocomplete-results">
+        {apiValue.map((item, index) => {
+          return (
+            <ResultsSearch
+              key={index}
+              id={item.recordid}
+              name={item.fields.nom_du_commerce}
+              navigate={nav}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

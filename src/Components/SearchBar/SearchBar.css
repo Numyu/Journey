@@ -7,6 +7,7 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
+    
 }
 
 .search-bar{
@@ -26,4 +27,23 @@
     background: none;
     margin:5px 20px 0 20px
 }
+.autocomplete-results{
+overflow: scroll;
+width: 396px;
+height: 75px;
+}
 
+.results-search{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    
+    
+}
+
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
