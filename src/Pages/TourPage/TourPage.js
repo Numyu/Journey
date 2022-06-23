@@ -5,17 +5,20 @@ import data from "../../data/data.json";
 import "./TourPage.css"
 // import ArtisanCard from "../Components/ArtisanCard/ArtisanCard";
 
+
 export default function TourPage() {
   const [stores, setStores] = useState([]);
   const [filteredStores, setFilteredStores] = useState([])
 
   const [filters, setFilters] = useState([
-    {category:"Restaurant ou traiteur"},
-    {category:"Artisanat d'art"},
-    {category:"Librairie"},
-    {category:"Autre"}
+    {category:"Restaurant ou traiteur", img:"/images/image-filter/food-drinks.png"},
+    {category:"Artisanat d'art", img:"/images/image-filter/culture.png"},
+    {category:"Librairie", img:"/images/image-filter/mode.png"},
+    {category:"Autre", img:"/images/image-filter/self-care.png"}
     
 ]);
+  
+
 
   useEffect(() => {
     setStores(data);
@@ -24,6 +27,7 @@ export default function TourPage() {
  
   const getFilterCategory = category => {
     console.log(category);
+    
     const filteredState = filteredStores.filter(item => {
       
       return item.fields.type_de_commerce == category
@@ -31,31 +35,19 @@ export default function TourPage() {
     console.log(filteredState);
     setStores(filteredState)
     
+    
   }
 
 
   
   console.log(stores);
-  // "Restaurant ou traiteur"
-  // "Artisanat d'art"
-  // "Boucherie - charcuterie - rôtisserie"
-  // "Librairie"
+
 
   return (
 
-    <div>
-      <div className='flex-row'>
-        {filters.map((filter,index) => {
-          return (
-            <FiltersButton
-            key={index}
-            category={filter.category}
-            getCat={getFilterCategory}
-            />
-          )
-        })}
-      </div>
-      
+    <div className="tour-page-wrapper">
+
+      <div className="artisan-card-wrapper">
 
       {stores
         // .slice(0,2)
@@ -82,6 +74,26 @@ export default function TourPage() {
             />
           )
         )}
+      </div>
+
+        {/* <div className="filter"> */}
+          <h2 id="filters-title">Sort by filter</h2>
+      <div className="filters-wrapper">
+      {/* <div className="flex-row"> */}
+        {filters.map((item,index) => {
+          return (
+            <FiltersButton
+            key={index}
+            category={item.category}
+            getCat={getFilterCategory}
+            image={item.img}
+            
+            />
+          )
+        })}
+      
+      </div>
+        
       
     </div>
   );

@@ -1,4 +1,41 @@
-.flex-row {
+
+.tour-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
+}
+
+.artisan-card-wrapper {
+    overflow: scroll;
+}
+
+.filters-wrapper {
     display: flex;
     flex-direction: row;
+    position:sticky;
+    
+    bottom: 0;
+    background-color: white;
+    margin: 0 0 40px 0;
 }
+
+#filters-title {
+    font-family: articulat-cf,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 50px 0 40px 16px;
+
+}
+
+/* .filter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+}  */
+

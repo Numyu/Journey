@@ -4,12 +4,13 @@ import "./FiltersButton.css"
 
 export default function FiltersButton(props) {
 
-
-
-
   return (
     <div className='filter-button' onClick={() => props.getCat(props.category)}>
-        <p>{props.category}</p>
+
+      <img src={props.image} id="filter-button-image"></img>
+
+
+      <p className='filter-button-text'>{props.category}</p>
     </div>
   )
 }
