@@ -9,7 +9,7 @@ export default function FiltersButton(props) {
 
       <img src={props.image} id="filter-button-image"></img>
 
-
+      
       <p className='filter-button-text'>{props.category}</p>
     </div>
   )

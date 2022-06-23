@@ -11,9 +11,9 @@
     overflow: scroll;
 }
 
-.filters-wrapper {
+.filters-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position:sticky;
     
     bottom: 0;
@@ -21,6 +21,10 @@
     margin: 0 0 40px 0;
 }
 
+.filters-wrapper {
+    display: flex;
+    flex-direction: row;
+}
 #filters-title {
     font-family: articulat-cf,sans-serif;
     font-style: normal;

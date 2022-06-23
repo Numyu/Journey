@@ -17,6 +17,7 @@ export default function TourPage() {
     {category:"Autre", img:"/images/image-filter/self-care.png"}
     
 ]);
+  const [clicked, setClicked] = useState([null])
   
 
 
@@ -27,13 +28,19 @@ export default function TourPage() {
  
   const getFilterCategory = category => {
     console.log(category);
-    
-    const filteredState = filteredStores.filter(item => {
+    if(clicked == category){
+      setStores(data)
+      setClicked([null])
+    }else {
+      const filteredState = filteredStores.filter(item => {
       
-      return item.fields.type_de_commerce == category
-    })
-    console.log(filteredState);
-    setStores(filteredState)
+        return item.fields.type_de_commerce == category
+      })
+      console.log(filteredState);
+      setStores(filteredState)
+      setClicked(category)
+    }
+ 
     
     
   }
@@ -77,20 +84,24 @@ export default function TourPage() {
       </div>
 
         {/* <div className="filter"> */}
-          <h2 id="filters-title">Sort by filter</h2>
-      <div className="filters-wrapper">
-      {/* <div className="flex-row"> */}
-        {filters.map((item,index) => {
-          return (
-            <FiltersButton
-            key={index}
-            category={item.category}
-            getCat={getFilterCategory}
-            image={item.img}
-            
-            />
-          )
-        })}
+      
+      <div className="filters-section">
+        <h2 id="filters-title">Sort by filter</h2>
+        <div className="filters-wrapper">
+                  {/* <div className="flex-row"> */}
+          {filters.map((item,index) => {
+            return (
+              <FiltersButton
+              key={index}
+              category={item.category}
+              getCat={getFilterCategory}
+              image={item.img}
+              
+              />
+            )
+          })}
+        </div>
+
       
       </div>
         
