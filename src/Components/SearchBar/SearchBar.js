@@ -45,17 +45,20 @@ export default function SearchBar() {
           .toLowerCase()
           .includes(inputValue.toLowerCase())
       ) {
-        console.log(element);
         result.push(element);
+        console.log(result);
+      }
+      if (inputValue === "") {
+        result.pop();
       }
     });
     setApiValue(result);
   }, [inputValue]);
-  console.log(apiValue);
 
   const take_value = (e) => {
     setInputValue(e);
   };
+
   const nav = (id) => {
     // Retourne l'id de l'élément séléctionné
     console.log(id);
