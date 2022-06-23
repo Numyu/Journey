@@ -50,7 +50,7 @@ export default function ArtisanCard({
         className={cardToggled ? "artisan-card-delete toggled" : "artisan-card-delete"}
         onClick={() => deleteArtisanCard(recordid)}
         >
-            <img src={Trash} alt="trash-delete" className="trash-icon"/>
+            <img src={Trash} alt="trash-delete" className="trash-icon"/>  
         </div>
       </div>
 
