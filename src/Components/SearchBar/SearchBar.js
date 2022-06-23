@@ -29,60 +29,29 @@ export default function SearchBar() {
     </svg>
   );
 
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState("");
   const [apiValue, setApiValue] = useState([]);
   const [stores, setStores] = useState([]);
-  const [StoreName, setStoreName] = useState([]);
 
   useEffect(() => {
     setStores(data);
   }, [stores]);
 
-  // console.log(stores);
-
-  // const Api_Fetch=()=>{
-  //   return (
-  //     <div>
-  //       {stores
-  //         // .slice(0,2)
-  //         .map(
-  //           ({
-  //             fields: {
-  //               nom_du_commerce
-                
-  //             },
-  //             recordid,
-  //           }) => (
-  //             <ResultsSearch
-  //               key={recordid}
-  //               name={nom_du_commerce}
-  //             />
-  //           )
-  //         )}
-  //     </div>)
-  // }
-
-  const filter=()=>{
-    const filter_array=stores.filter(item => {
-      return(
-        setStoreName(item.fields.nom_du_commerce)
-        // console.log(item.fields.nom_du_commerce)
-        
-      )
-    })
-  }
-
- 
-  
-  
-  const compare_value_from_api = () => {
-    if (inputValue in StoreName) {
-      console.log('test')
-    } else {
-    }
-  };
-
-  
+  useEffect(() => {
+    const result = [];
+    stores.forEach((element) => {
+      if (
+        element.fields.nom_du_commerce
+          .toLowerCase()
+          .includes(inputValue.toLowerCase())
+      ) {
+        console.log(element);
+        result.push(element.fields.nom_du_commerce);
+      }
+    });
+    setApiValue(result);
+  }, [inputValue]);
+  console.log(apiValue);
 
   const take_value = (e) => {
     setInputValue(e);
@@ -99,10 +68,10 @@ export default function SearchBar() {
           value={inputValue}
         ></input>
         <button className="magnifying-glass">{svg_magnifying_glass} </button>
-
-        
+        {apiValue.map((item, index) => {
+          return <ResultsSearch key={index} name={item} />;
+        })}
       </form>
-      
     </>
   );
 }
