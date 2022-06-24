@@ -10,13 +10,18 @@ export default function TourPage() {
   const [stores, setStores] = useState([]);
   const [filteredStores, setFilteredStores] = useState([])
 
+
+
+
   const [filters, setFilters] = useState([
-    {category:"Restaurant ou traiteur", img:"/images/image-filter/food-drinks.png"},
-    {category:"Artisanat d'art", img:"/images/image-filter/culture.png"},
-    {category:"Librairie", img:"/images/image-filter/mode.png"},
-    {category:"Autre", img:"/images/image-filter/self-care.png"}
+
+  {category:"Restaurant ou traiteur", img:"/images/image-filter/food-drinks.png"},
+  {category:"Artisanat d'art", img:"/images/image-filter/culture.png"},
+  {category:"Librairie", img:"/images/image-filter/mode.png"},
+  {category:"Autre", img:"/images/image-filter/self-care.png"}
     
 ]);
+
   const [clicked, setClicked] = useState([null])
   
 
@@ -26,12 +31,17 @@ export default function TourPage() {
     setFilteredStores(data)
   }, []);
  
+
   const getFilterCategory = category => {
     console.log(category);
+
     if(clicked == category){
+
       setStores(data)
       setClicked([null])
+      
     }else {
+
       const filteredState = filteredStores.filter(item => {
       
         return item.fields.type_de_commerce == category
