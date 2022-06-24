@@ -10,18 +10,27 @@ export default function ItineraryPage() {
   const [itineraries, setItineraries] = useState([
     {category: "global", itineraryName: "Discover", description: "Enjoy the best local craftmanship", id: "discover"},
     {category: "global", itineraryName: "Paris Lover", description: "Live the 'art de vivre à la Française'", id: "paris-lover"},
-    {category: "global", itineraryName: "Grand Tour", description: "Experience French Luxury", id: "grand-tour"},
+    {category: "global", itineraryName: "Paris Lover", description: "Live the 'art de vivre à la Française'", id: "paris-lover"},
+
+
     {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "food&drinks", itineraryName: "Manger", description: "Premier itineraire de bouffe cousin", id: "manger"},
+    {category: "culture", itineraryName: "Musee et tout", description: "Des musees de fou furieux poto", id: "musee"},
     {category: "culture", itineraryName: "Musee et tout", description: "Des musees de fou furieux poto", id: "musee"},
     {category: "mode", itineraryName: "vetements", description: "Meilleurs vetement ici", id: "vetement"},
     {category: "selfcare", itineraryName: "soin", description: "soin soin", id: "self-care"}
   ])
 
   const [filters, setFilters] = useState([
-    {category:"food&drinks", img:"/images/image-filter/food-drinks.png"},
-    {category:"culture", img:"/images/image-filter/culture.png"},
-    {category:"mode", img:"/images/image-filter/mode.png"},
-    {category:"selfcare", img:"/images/image-filter/self-care.png"}
+    {name :"Food & Drinks", category:"food&drinks", img:"/images/image-filter/food-drinks.png"},
+    {name :"Culture", category:"culture", img:"/images/image-filter/culture.png"},
+    {name :"Mode", category:"mode", img:"/images/image-filter/mode.png"},
+    {name :"Self-care", category:"selfcare", img:"/images/image-filter/self-care.png"}
     
     ]);
 
@@ -47,10 +56,13 @@ export default function ItineraryPage() {
 
   return (
     <div className='itinerary-page-container'>
-      <button className='cta-back'>{ctaBack}</button>
+     
+      <div className='itinerary-page-header'>
+        <button className='cta-back'>{ctaBack}</button>
+        <h2 className='itinerary-page-title'>Sacré-Coeur</h2>
+        <p className='itinerary-page-text'>Pick an itinary that suits you</p>
+      </div>
 
-      <h2 className='itinerary-page-title'>Sacré-Coeur</h2>
-      <p className='itinerary-page-text'>Pick an itinary that suits you</p>
 
       <ul className="itinerary-container">
         
@@ -68,22 +80,24 @@ export default function ItineraryPage() {
         })}
       </ul>
 
-      <h2 className='itinerary-page-title filter-title'>Or sort by filter</h2>
+   
 
       <div className="filters-section">
+        <h2 className='itinerary-page-title filter-title'>Or sort by filter</h2>
 
-        <div className="filters-wrapper">
-          {filters.map((item,index) => {
-            return (
-              <FilterCard
-              key={index}
-              category={item.category}
-              getCat={getFilterCategory}
-              image={item.img}
-              
-              />
-            )
-          })}
+          <div className="filters-wrapper">
+            {filters.map((item,index) => {
+              return (
+                <FilterCard
+                key={index}
+                category={item.category}
+                getCat={getFilterCategory}
+                image={item.img}
+                name={item.name}
+                
+                />
+              )
+            })}
       </div>
     </div>
   </div>

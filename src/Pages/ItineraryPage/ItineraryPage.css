@@ -1,6 +1,10 @@
 .itinerary-page-container {
     font-family: articulat-cf, sans-serif;
     margin: 0 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .cta-back {
@@ -15,34 +19,89 @@
 }
 
 .itinerary-page-text {
-    margin: 19px 0 0 0;
+    margin: 19px 0 19px 0;
     font-size: 14px;
     font-weight: normal;
 }
 
 .filter-title {
-    margin: 50px 0 34px 0;
+    margin: 34px 0 34px 0;
 }
 
 .filters-section {
     display: flex;
     flex-direction: column;
     position:sticky;
-
     bottom: 0;
     background-color: white;
     margin: 0 0 40px 0;
 
-    /* background: blue; */
 }
 
 .filters-wrapper {
+
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     gap: 16px;
-  
-
-    /* background: red; */
 }
+
+
+
+
+.itinerary-container {
+    overflow: scroll;
+    height: 500px;
+    
+}
+
+
+
+
+
+/* Mobile M */
+
+/* @media screen and (max-width:375px){
+    .itinerary-page-container{
+        background-color: rgba(158, 158, 55, 0.186);
+    }
+    .cta-back {
+        margin: 22px 0 14px 20px;
+        background: none;
+        border: none;
+    }
+
+    .itinerary-page-text {
+        margin: 10px 0 10px 0;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .filter-title {
+        margin: 22px 0 22px 0;
+    }
+
+    .filters-section {
+
+        margin: 0 0 20px 0;
+    
+    } */
+
+
+    
+
+
+
+
+    
+/* } */
+
+/* Mobile S */
+
+/* @media screen and (max-width:320px){
+    .itinerary-page-container{
+        background-color: rgba(158, 72, 55, 0.192);
+    }
+    
+} */
+
