@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { stringify } from "uuid";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
 import data from "../../data/data.json";
 
@@ -7,6 +8,7 @@ export default function TourPage() {
 
   useEffect(() => {
     setStores(data);
+    // localStorage.setItem("data", JSON.stringify(data)) 
   }, [  ]);
 
   console.log(stores);
