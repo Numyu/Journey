@@ -4,7 +4,7 @@ const filesToCache = [
   "./data/data.json",
   "./images/logo.png",
   "./static/js/bundle.js",
-  ".manifest.json"
+  ".manifest.json",
 ];
 
 self.addEventListener("install", (event) => {
