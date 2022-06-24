@@ -8,7 +8,6 @@ export default function TourPage() {
 
   useEffect(() => {
     setStores(data);
-    // localStorage.setItem("data", JSON.stringify(data)) 
   }, [  ]);
 
   console.log(stores);
