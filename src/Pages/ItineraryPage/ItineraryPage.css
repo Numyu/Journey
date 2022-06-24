@@ -23,3 +23,26 @@
 .filter-title {
     margin: 50px 0 34px 0;
 }
+
+.filters-section {
+    display: flex;
+    flex-direction: column;
+    position:sticky;
+
+    bottom: 0;
+    background-color: white;
+    margin: 0 0 40px 0;
+
+    /* background: blue; */
+}
+
+.filters-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 16px;
+  
+
+    /* background: red; */
+}
