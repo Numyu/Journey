@@ -36,7 +36,6 @@ export default function TourPage() {
     setMousePos({ mouseX: e.clientX, mouseY: e.clientY });
   };
 
-
   useEffect(() => {
     if (mouseStartPos && mousePos.mouseX != 0) {
       if (
@@ -50,9 +49,9 @@ export default function TourPage() {
     }
   }, [mousePos]);
 
-  const deleteArtisanCard = (recordid) => {
+  const deleteArtisanCard = (uuid) => {
     const newStores = stores.filter((store) => {
-      return store.recordid != recordid;
+      return store.uuid != uuid;
     });
     setStores(newStores);
   };
@@ -61,27 +60,23 @@ export default function TourPage() {
     <div>
       {stores
         // .slice(0,2)
-        .map(
-          ({
-            uuid, name, smallDescription, opening, description, type,
-          }) => (
-            <ArtisanCard
-              key={uuid}
-              recordid={uuid}
-              shopName={name}
-              shopDetail={smallDescription}
-              openingHours={opening}
-              shopDescription={
-                description ? description : "Il n'y a pas de description"
-              }
-              type_de_commerce={type}
-              draggable
-              onDrag={dragItem}
-              onDragStart={dragStartItem}
-              deleteArtisanCard={deleteArtisanCard}
-            />
-          )
-        )}
+        .map(({ uuid, name, smallDescription, opening, description, type }) => (
+          <ArtisanCard
+            key={uuid}
+            uuid={uuid}
+            shopName={name}
+            shopDetail={smallDescription}
+            openingHours={opening}
+            shopDescription={
+              description ? description : "Il n'y a pas de description"
+            }
+            type_de_commerce={type}
+            draggable
+            onDrag={dragItem}
+            onDragStart={dragStartItem}
+            deleteArtisanCard={deleteArtisanCard}
+          />
+        ))}
     </div>
   );
 }
