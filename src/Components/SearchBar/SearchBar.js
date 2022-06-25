@@ -47,6 +47,7 @@ export default function SearchBar() {
       ) {
         result.push(element);
         console.log(result);
+
       }
       if (inputValue === "") {
         result.pop();

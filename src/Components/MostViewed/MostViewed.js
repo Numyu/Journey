@@ -40,7 +40,7 @@ export default function MostViewed() {
                     cardItem.map((card) => {
                         return (
                             <GeneratedCard
-                                Key={card.id}
+                                key={card.id}
                                 classCard={card.classCard}
                                 img={card.img}
                                 title={card.title}
