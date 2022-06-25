@@ -7,10 +7,11 @@ export default function ItineraryCard(props) {
     <div className={`itinerary-card ${ props.id }`} style={{backgroundImage: `${ itineraryImg }`}}>
       <div className='it-filter'></div>
       <div className='itinerary-content'>
-        <p className='itinerary-category'>{props.category.toUpperCase()}</p>
+        <p className='itinerary-category'>{props.type.toUpperCase()}</p>
 
         <h3 className='itinerary-name'>{props.itineraryName}</h3>
-        <p className='itinerary-description'>{props.description}</p>
+        {/* <p className='itinerary-description'>{props.description}</p> */}
+        <p className='itinerary-description'>La description de fou quoi</p>
       </div>
           
     </div>
