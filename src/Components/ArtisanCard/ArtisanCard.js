@@ -12,7 +12,7 @@ export default function ArtisanCard({
   onDragStart, 
   onDragEnd,
   deleteArtisanCard,
-  recordid
+  uuid
 }) {
   const [cardToggled, setCardToggled] = useState(false);
 
@@ -47,7 +47,7 @@ export default function ArtisanCard({
 
         <div 
         className={cardToggled ? "artisan-card-delete toggled" : "artisan-card-delete"}
-        onClick={() => deleteArtisanCard(recordid)}
+        onClick={() => deleteArtisanCard(uuid)}
         >
             <img src={process.env.PUBLIC_URL + '/images/ArtisanCardIcones/trash.svg'} alt="trash-delete" className="trash-icon"/>  
         </div>

@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { stringify } from "uuid";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
 import data from "../../data/data.json";
+import api from "../../api/api.json";
 
 export default function TourPage() {
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
-    setStores(data);
-  }, [  ]);
+    setStores(api);
+  }, []);
 
-  console.log(stores);
+  console.log(api);
 
   const [mouseStartPos, setMouseStartPos] = useState({});
   const [mousePos, setMousePos] = useState({});
@@ -36,7 +36,6 @@ export default function TourPage() {
     setMousePos({ mouseX: e.clientX, mouseY: e.clientY });
   };
 
-  console.log(isDragged);
 
   useEffect(() => {
     if (mouseStartPos && mousePos.mouseX != 0) {
@@ -64,25 +63,18 @@ export default function TourPage() {
         // .slice(0,2)
         .map(
           ({
-            fields: {
-              nom_du_commerce,
-              adresse,
-              code_postal,
-              description,
-              type_de_commerce,
-            },
-            recordid,
+            uuid, name, smallDescription, opening, description, type,
           }) => (
             <ArtisanCard
-              key={recordid}
-              recordid={recordid}
-              shopName={nom_du_commerce}
-              shopDetail={adresse}
-              openingHours={code_postal}
+              key={uuid}
+              recordid={uuid}
+              shopName={name}
+              shopDetail={smallDescription}
+              openingHours={opening}
               shopDescription={
                 description ? description : "Il n'y a pas de description"
               }
-              type_de_commerce={type_de_commerce}
+              type_de_commerce={type}
               draggable
               onDrag={dragItem}
               onDragStart={dragStartItem}
