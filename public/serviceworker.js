@@ -5,6 +5,7 @@ const filesToCache = [
   "./images/logo.png",
   "./static/js/bundle.js",
   ".manifest.json",
+  "./images/ArtisanCardIcones/trash.svg",
 ];
 
 self.addEventListener("install", (event) => {

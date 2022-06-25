@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./ArtisanCard.css";
-import Trash from './icones/trash.svg'
 
 
 export default function ArtisanCard({
@@ -50,7 +49,7 @@ export default function ArtisanCard({
         className={cardToggled ? "artisan-card-delete toggled" : "artisan-card-delete"}
         onClick={() => deleteArtisanCard(recordid)}
         >
-            <img src={Trash} alt="trash-delete" className="trash-icon"/>  
+            <img src={process.env.PUBLIC_URL + '/images/ArtisanCardIcones/trash.svg'} alt="trash-delete" className="trash-icon"/>  
         </div>
       </div>
 
