@@ -3,41 +3,57 @@ import ItineraryCard from '../../Components/ItineraryCard/ItineraryCard'
 import FilterCard from "../../Components/FilterCard/FilterCard";
 import { useState, useEffect } from "react";
 import "./ItineraryPage.css"
-import api from "../../api/api.json";
 
 export default function ItineraryPage() {
-  // let currentCategory = "global"
 
-  const [itineraries, setItineraries] = useState([])
-
-  useEffect(() => {
-    setItineraries(api);
-  }, []);
-
-  console.log(itineraries);
+  const [listPath, setListPath] = useState(
+    {
+      global: [
+                {itineraryCategory: "global", itineraryName: "Discover", itineraryDescription: "Une description t'as capté"},
+                {itineraryCategory: "global", itineraryName: "Paris Lover", itineraryDescription: "Une description t'as capté"},
+                {itineraryCategory: "global", itineraryName: "Grand Tour", itineraryDescription: "Une description t'as capté"},
+              ],
+                  
+      foodAndDrinks: [
+                      {itineraryCategory: "food and drinks", itineraryName: "Epicurian", itineraryDescription: "Une description t'as capté"},
+                      {itineraryCategory: "food and drinks", itineraryName: "Gourmet", itineraryDescription: "Une description t'as capté"},
+                      {itineraryCategory: "food and drinks", itineraryName: "Signature", itineraryDescription: "Une description t'as capté"},
+                    ],
+      culture: [
+                {itineraryCategory: "culture", itineraryName: "Van Gogh", itineraryDescription: "Une description t'as capté"},
+                {itineraryCategory: "culture", itineraryName: "Le Nôtre", itineraryDescription: "Une description t'as capté"},
+                {itineraryCategory: "culture", itineraryName: "Haussman", itineraryDescription: "Une description t'as capté"},
+               ],
+      mode: [
+              {itineraryCategory: "mode", itineraryName: "Jean-Paul Gaultier", itineraryDescription: "Une description t'as capté"},
+              {itineraryCategory: "mode", itineraryName: "Coco Chanel", itineraryDescription: "Une description t'as capté"},
+              {itineraryCategory: "mode", itineraryName: "Yves Saint Laurent", itineraryDescription: "Une description t'as capté"},
+            ],
+      selfCare: [
+                  {itineraryCategory: "self-care", itineraryName: "Bio", itineraryDescription: "Une description t'as capté"},
+                  {itineraryCategory: "self-care", itineraryName: "I care", itineraryDescription: "Une description t'as capté"},
+                ],
+    },
+  );
 
   const [filters, setFilters] = useState([
 
-    {name :"Food & Drinks", category:"Food and drinks", img:"/images/image-filter/food-drinks.png"},
-    {name :"Culture", category:"art and culture", img:"/images/image-filter/culture.png"},
-    {name :"Mode", category:"Mode", img:"/images/image-filter/mode.png"},
-    {name :"Self-care", category:"Selfcare", img:"/images/image-filter/self-care.png"}
+    {name :"Food & Drinks", category: listPath.foodAndDrinks, img:"/images/image-filter/food-drinks.png"},
+    {name :"Culture", category: listPath.culture, img:"/images/image-filter/culture.png"},
+    {name :"Mode", category: listPath.mode, img:"/images/image-filter/mode.png"},
+    {name :"Self-care", category: listPath.selfCare, img:"/images/image-filter/self-care.png"}
 
-    ]);
+  ]);
 
-  // const [clicked, setClicked] = useState([null])
 
-  const [currentCategoryItineraries, setCurrentCategoryItineraries] = useState("global")
+  const [currentCategoryItineraries, setCurrentCategoryItineraries] = useState(listPath.global);
 
   const getFilterCategory = type => {
-    console.log(type);
-    // if(currentCategoryItineraries == type){
-    //   setCurrentCategoryItineraries("global")
-    //   // setClicked([null])
-    // }else {
+    if(currentCategoryItineraries == type){
+      setCurrentCategoryItineraries(listPath.global)
+    }else {
       setCurrentCategoryItineraries(type)
-      // setClicked(category)
-    // }
+    }
   }
 
   const ctaBack = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" fill="none" viewBox="0 0 28 18">
@@ -55,18 +71,18 @@ export default function ItineraryPage() {
 
       <ul className="itinerary-container">
         
-        {itineraries.map((item, index) => {
-          if (item.type == currentCategoryItineraries) {
+        {currentCategoryItineraries.map((item, index) => {
+
             return (
               <ItineraryCard 
                 key={index}
-                type={item.type}
-                itineraryName={item.path}
-                // description={item.description}
-                id={item.id}
+                type={item.itineraryCategory}
+                itineraryName={item.itineraryName}
+                description={item.itineraryDescription}
+                // id={item.id}
               />
             )}
-        })}
+        )}
       </ul>
       
       <div className="filters-section">
