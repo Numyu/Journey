@@ -60,8 +60,17 @@ export default function TourPage() {
     <div>
       {stores
         // .slice(0,2)
-        .map(({ uuid, name, smallDescription, opening, description, type }) => (
-          <ArtisanCard
+        .map(
+          ({
+            uuid,
+            name,
+            smallDescription,
+            opening,
+            description,
+            type,
+            image,
+          }) => (
+            <ArtisanCard
             key={uuid}
             uuid={uuid}
             shopName={name}
@@ -75,8 +84,11 @@ export default function TourPage() {
             onDrag={dragItem}
             onDragStart={dragStartItem}
             deleteArtisanCard={deleteArtisanCard}
-          />
-        ))}
+            picture={process.env.PUBLIC_URL + '/images/ArtisanCardImg/' + image}
+            />
+          )
+        )}
+
     </div>
   );
 }
