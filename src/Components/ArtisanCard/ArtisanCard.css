@@ -30,28 +30,23 @@
     transition: width 0.4s ease-in-out;
 }
 
-
-
-
 .dragged {
     width: 80%;
-    /* background-color: red   ; */
 }
 
 /* J AI RAJOUTE ICI */
-/* .artisan-header-wrapper {
+.artisan-header-wrapper {
     display: flex;
     flex-direction: row;
-} */
+    position: relative;
+}
 
 .artisan-card-delete {
     width: 40px;
     height: 40px;
-    position: relative;
-    top: -124px;
+    position: absolute;
     left: 356px;
-    /* z-index: -1 ; */
-    border-radius: 4px;   
+    border-radius: 4px; 
 }
 
 .artisan-card-delete:hover {
