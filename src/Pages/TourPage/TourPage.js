@@ -28,8 +28,6 @@ export default function TourPage() {
   };
 
   const dragItem = (e) => {
-    console.log("yo");
-
     if (isDragged) {
       e.target.classList.add("dragged");
     }
@@ -71,24 +69,25 @@ export default function TourPage() {
             image,
           }) => (
             <ArtisanCard
-            key={uuid}
-            uuid={uuid}
-            shopName={name}
-            shopDetail={smallDescription}
-            openingHours={opening}
-            shopDescription={
-              description ? description : "Il n'y a pas de description"
-            }
-            type_de_commerce={type}
-            draggable
-            onDrag={dragItem}
-            onDragStart={dragStartItem}
-            deleteArtisanCard={deleteArtisanCard}
-            picture={process.env.PUBLIC_URL + '/images/ArtisanCardImg/' + image}
+              key={uuid}
+              uuid={uuid}
+              shopName={name}
+              shopDetail={smallDescription}
+              openingHours={opening}
+              shopDescription={
+                description ? description : "Il n'y a pas de description"
+              }
+              type_de_commerce={type}
+              draggable
+              onDrag={dragItem}
+              onDragStart={dragStartItem}
+              deleteArtisanCard={deleteArtisanCard}
+              picture={
+                process.env.PUBLIC_URL + "/images/ArtisanCardImg/" + image
+              }
             />
           )
         )}
-
     </div>
   );
 }

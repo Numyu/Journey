@@ -20,6 +20,10 @@ export default function ArtisanCard({
     setCardToggled(!cardToggled);
   };
 
+  const cardBackground = {
+    backgroundImage: `url(${picture})`
+  }
+
   return (
     <div
       className={cardToggled ? "artisan-card toggled" : "artisan-card"}
@@ -29,9 +33,9 @@ export default function ArtisanCard({
 
         <div
           className={cardToggled ? "artisan-card-header toggled" : "artisan-card-header"}
-          style={{
-            backgroundImage: `url(${picture})`
-          }}
+          style={
+            cardBackground
+          }
           draggable
           onDrag={onDrag}
           onDragStart={onDragStart}

@@ -10,8 +10,6 @@
     margin: 0px 16px 14px 16px;
     font-family: articulat-cf,sans-serif;
     font-style: normal;
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
-
 }
 .artisan-card.toggled {
     background: #fff;
@@ -32,6 +30,7 @@
 
     /* background à supprimer quand on aura les images dans l'API */
     /* background-color: darkslategray; */
+    
     transition: width 0.4s ease-in-out;
 }
 
