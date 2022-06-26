@@ -27,12 +27,11 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
-
-    /* background à supprimer quand on aura les images dans l'API */
-    /* background-color: darkslategray; */
-    
     transition: width 0.4s ease-in-out;
 }
+
+
+
 
 .dragged {
     width: 80%;

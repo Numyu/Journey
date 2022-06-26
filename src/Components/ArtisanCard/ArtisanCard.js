@@ -21,7 +21,7 @@ export default function ArtisanCard({
   };
 
   const cardBackground = {
-    backgroundImage: `url(${picture})`
+    background: `linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(${picture}) 100%`
   }
 
   return (
