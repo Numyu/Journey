@@ -3,6 +3,7 @@ import "./SearchBar.css";
 import api from "../../api/api.json";
 import ResultsSearch from "./ResultsSearch";
 
+
 export default function SearchBar() {
   const svg_magnifying_glass = (
     <svg
