@@ -11,9 +11,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/itineraries" element={<ItineraryPage/>} />
+        <Route path="/itineraries/:monument" element={<ItineraryPage/>} />
         <Route path="/itineraries/tour" element={<TourPage />} />
       </Routes>
+      
       {/* <ItineraryPage/>
       <LandingPage />
       <TourPage /> */}
