@@ -1,0 +1,17 @@
+.cta-google-map {
+    margin: 0 16px 58px 16px;
+    width: 396px;
+    height: 50px;
+    border: 2px solid #FFB800;
+    border-radius: 4px;
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.15))
+}
+
+.content-text {
+    font-size: 20px;
+    font-family: articulat-cf, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
