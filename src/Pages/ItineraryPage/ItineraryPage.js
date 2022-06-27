@@ -1,10 +1,11 @@
 import React from 'react'
 import ItineraryCard from '../../Components/ItineraryCard/ItineraryCard'
 import FilterCard from "../../Components/FilterCard/FilterCard";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { useNavigate } from 'react-router-dom'
 import "./ItineraryPage.css"
 import { useParams } from 'react-router-dom';
+import CtaBack from '../../Components/CtaBack/CtaBack';
 
 export default function ItineraryPage() {
 
@@ -61,15 +62,28 @@ export default function ItineraryPage() {
     }
   }
 
-  const ctaBack = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" fill="none" viewBox="0 0 28 18">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m26.006 8.513-24.944.112m6.502-7.517L1.153 8.64l6.659 7.413"/>
-                  </svg>
+  const navToTour = tour => {
+    navigate(`/itineraries/${params.monument}/${tour}`)
+    console.log(tour);
+  }
+  
+
+
+  // const ctaBack = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" fill="none" viewBox="0 0 28 18">
+  //                   <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m26.006 8.513-24.944.112m6.502-7.517L1.153 8.64l6.659 7.413"/>
+  //                 </svg>
 
   return (
     <div className='itinerary-page-container'>
      
       <div className='itinerary-page-header'>
-        <button className='cta-back' onClick={() => navigate("/")}>{ctaBack} </button>
+
+        <CtaBack
+
+        valueLink={`/`}
+
+        />
+        {/* <button className='cta-back' onClick={() => navigate("/")}>{ctaBack} </button> */}
         <h2 className='itinerary-page-title'>{params.monument}</h2>
         <p className='itinerary-page-text'>Pick an itinary that suits you</p>
       </div>
@@ -77,7 +91,7 @@ export default function ItineraryPage() {
       <ul className="itinerary-container">
         
         {currentCategoryItineraries.map((item, index) => {
-
+            
             return (
               <ItineraryCard 
                 key={index}
@@ -85,6 +99,7 @@ export default function ItineraryPage() {
                 itineraryName={item.itineraryName}
                 description={item.itineraryDescription}
                 image={item.itineraryImg}
+                navFunc={navToTour}
                 // id={item.id}
               />
             )}

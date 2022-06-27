@@ -39,13 +39,8 @@ export default function MostViewed() {
     },
   ]);
 
-  // Fonction de redirection vers la page catégorie
-  const nav = (title) => {
-    // Retourne l'id de l'élément séléctionné
-    console.log(title);
-  };
 
-  const nav2 = monument => {
+  const navToItineraries = monument => {
  
     navigate(`/itineraries/${monument}`)
     console.log(monument);
@@ -66,8 +61,7 @@ export default function MostViewed() {
               classCard={card.classCard}
               img={card.img}
               title={card.title}
-              Navigate={nav}
-              NavFunc={nav2}
+              NavFunc={navToItineraries}
               id={card.id}
             />
           );

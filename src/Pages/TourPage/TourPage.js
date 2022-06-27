@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
 import api from "../../api/api.json";
+import CtaBack from "../../Components/CtaBack/CtaBack";
+import { useParams } from "react-router-dom";
 
 export default function TourPage() {
   const [stores, setStores] = useState([]);
@@ -10,6 +12,8 @@ export default function TourPage() {
   }, []);
 
   console.log(api);
+
+  const params = useParams()
 
   const [mouseStartPos, setMouseStartPos] = useState({});
   const [mousePos, setMousePos] = useState({});
@@ -55,6 +59,11 @@ export default function TourPage() {
 
   return (
     <div>
+      <CtaBack
+    
+      valueLink={`/itineraries/${params.monument}`}
+        
+      />
       {stores
         // .slice(0,2)
         .map(
