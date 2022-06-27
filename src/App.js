@@ -1,11 +1,14 @@
 import './App.css';
-import CarouselCard from './Components/CarouselCard/CarouselCard';
-import LandingPage from './Pages/LandingPage/LandingPage';
+import ItineraryPage from './Pages/ItineraryPage/ItineraryPage';
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import TourPage from "./Pages/TourPage/TourPage";
 
 function App() {
   return (
-    <div className='App'>
-      <LandingPage/>
+    <div className="App">
+      <ItineraryPage/>
+      <LandingPage />
+      <TourPage />
     </div>
   );
     
