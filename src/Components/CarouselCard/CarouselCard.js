@@ -14,7 +14,7 @@ export default function CarouselCard() {
 
     }, []);
 
-    const[visible, setVisible]= useState(2);
+    const[visible, setVisible]= useState(3);
     const viewMore = () => {
         setVisible((prevValue) => prevValue + 4);
     }
@@ -22,7 +22,7 @@ export default function CarouselCard() {
   return (
     <div>
         <motion.div ref={carousel} className='carousel'>
-            <button onClick={viewMore} >View more</button>
+            <button className="btnViewMore" onClick={viewMore} >View more</button>
         <motion.div drag="y" dragConstraints={{ top: 0, left: -width}} className='inner-carousel'>
           {images.slice(0, visible).map(image => {
             return(

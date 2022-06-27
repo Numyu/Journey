@@ -9,8 +9,8 @@ export default function LandingPage() {
         <>
             <SearchBar />
             <MostViewed />
-            <CarouselCard/> 
             <CtaMaps />
+            <CarouselCard/> 
         </>
     )
 }
