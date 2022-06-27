@@ -1,0 +1,58 @@
+
+.CarouselCard{
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+    margin-left: 0px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.TitleCarouselCard {
+    font-family: 'Articulat CF';
+    font-style: Bold;
+    font-size: 12px;
+    Line-height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.item {
+    width: 150px;
+    height: 150px;
+    margin: 15px;  
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15); 
+    pointer-events: none;
+}
+
+.inner-carousel {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(238, 238, 238);
+}
+
+.carousel{
+    cursor: grab;
+    overflow: hidden;
+    width: 428px;
+    background: rgb(238, 238, 238);
+}
+
+* {
+    margin: 0 7.3%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  button{
+      border: none;
+      display: flex;
+      cursor: pointer;
+  }
