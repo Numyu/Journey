@@ -57,6 +57,17 @@ export default function TourPage() {
     setStores(newStores);
   };
 
+
+
+
+
+  const filteredStores = stores.filter((store) => {
+
+      return store.path == params.tour
+  })
+
+  
+
   return (
     <div>
       <CtaBack
@@ -64,8 +75,7 @@ export default function TourPage() {
       valueLink={`/itineraries/${params.monument}`}
         
       />
-      {stores
-        // .slice(0,2)
+      {filteredStores
         .map(
           ({
             uuid,
@@ -74,7 +84,8 @@ export default function TourPage() {
             opening,
             description,
             type,
-            image,
+            image
+            
           }) => (
             <ArtisanCard
               key={uuid}
