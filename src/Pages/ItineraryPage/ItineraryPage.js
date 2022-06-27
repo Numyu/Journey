@@ -2,9 +2,12 @@ import React from 'react'
 import ItineraryCard from '../../Components/ItineraryCard/ItineraryCard'
 import FilterCard from "../../Components/FilterCard/FilterCard";
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
 import "./ItineraryPage.css"
 
 export default function ItineraryPage() {
+
+    const navigate = useNavigate()
 
     const [listPath, setListPath] = useState(
         {
@@ -64,7 +67,7 @@ export default function ItineraryPage() {
     <div className='itinerary-page-container'>
      
       <div className='itinerary-page-header'>
-        <button className='cta-back'>{ctaBack}</button>
+        <button className='cta-back' onClick={() => navigate("/")}>{ctaBack} </button>
         <h2 className='itinerary-page-title'>Sacré-Coeur</h2>
         <p className='itinerary-page-text'>Pick an itinary that suits you</p>
       </div>

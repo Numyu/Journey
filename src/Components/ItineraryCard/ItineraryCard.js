@@ -1,7 +1,11 @@
 import React from 'react'
 import "./ItineraryCard.css"
 
+
 export default function ItineraryCard(props) {
+
+
+
   const itineraryImg = `linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${ props.image })`
   return (
     <div className="itinerary-card" style={{backgroundImage: `${ itineraryImg }`}}>
