@@ -14,25 +14,25 @@ export default function MostViewed() {
       id: uuidv4(),
       title: "Eiffel Tower",
       classCard: "eiffel-tower-card",
-      img: "../../img/MostViewedImg/eiffel.png",
+      img: "/images/MostViewedImg/eiffel.png",
     },
     {
       id: uuidv4(),
       title: "Louvre Museum",
       classCard: "louvre-museum-card",
-      img: "../../img/MostViewedImg/eiffel.png",
-    },
-    {
-      id: uuidv4(),
-      title: "Triumph Arch",
-      classCard: "triumph-arch-card",
-      img: "../../img/MostViewedImg/eiffel.png",
+      img: "/images/MostViewedImg/louvre-museum.png",
     },
     {
       id: uuidv4(),
       title: "Sacré-Coeur’s Basilica",
       classCard: "sacre-coeurs-basilica",
-      img: "../../img/MostViewedImg/eiffel.png",
+      img: "/images/MostViewedImg/sacre-coeur-basilica.png",
+    },
+    {
+      id: uuidv4(),
+      title: "Triumph Arch",
+      classCard: "triumph-arch-card",
+      img: "/images/MostViewedImg/triumph-arch.png",
     },
   ]);
 

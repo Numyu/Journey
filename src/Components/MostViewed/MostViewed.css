@@ -103,8 +103,8 @@ button {
 
 .eiffel-tower-card button {
 
-    background: url('../../img/MostViewedImg/eiffel.png') no-repeat center;
-    background-size: cover;
+    /* background: url('../../img/MostViewedImg/eiffel.png') no-repeat center; */
+    /* background-size: cover; */
     width: 150px;
     height: 300px;
     border: none;
@@ -115,8 +115,9 @@ button {
 
 .louvre-museum-card button {
 
-    background: url('../../img/MostViewedImg/louvre-museum.png') no-repeat center;
-    background-size: cover;
+    /* background: url('../../img/MostViewedImg/louvre-museum.png') no-repeat center; */
+    /* background-size: cover; */
+   
     width: 231px;
     height: 130px;
     border: none;
@@ -125,8 +126,8 @@ button {
 }
 
 .triumph-arch-card button {
-    background: url('../../img/MostViewedImg/triumph-arch.png') no-repeat center;
-    background-size: cover;
+    /* background: url('../../img/MostViewedImg/triumph-arch.png') no-repeat center; */
+    /* background-size: cover; */
     width: 231px;
     height: 130px;
     border: none;
@@ -136,8 +137,8 @@ button {
 }
 
 .sacre-coeurs-basilica button {
-    background: url('../../img/MostViewedImg/sacre-coeur-basilica.png') no-repeat center;
-    background-size: cover;
+    /* background: url('../../img/MostViewedImg/sacre-coeur-basilica.png') no-repeat center; */
+    /* background-size: cover; */
     width: 396px;
     height: 100px;
     border: none;
