@@ -6,44 +6,44 @@ import "./ItineraryPage.css"
 
 export default function ItineraryPage() {
 
-  const [listPath, setListPath] = useState(
-    {
-      global: [
-                {itineraryCategory: "global", itineraryName: "Discover", itineraryDescription: "Une description t'as capté"},
-                {itineraryCategory: "global", itineraryName: "Paris Lover", itineraryDescription: "Une description t'as capté"},
-                {itineraryCategory: "global", itineraryName: "Grand Tour", itineraryDescription: "Une description t'as capté"},
-              ],
-                  
-      foodAndDrinks: [
-                      {itineraryCategory: "food and drinks", itineraryName: "Epicurian", itineraryDescription: "Une description t'as capté"},
-                      {itineraryCategory: "food and drinks", itineraryName: "Gourmet", itineraryDescription: "Une description t'as capté"},
-                      {itineraryCategory: "food and drinks", itineraryName: "Signature", itineraryDescription: "Une description t'as capté"},
-                    ],
-      culture: [
-                {itineraryCategory: "culture", itineraryName: "Van Gogh", itineraryDescription: "Une description t'as capté"},
-                {itineraryCategory: "culture", itineraryName: "Le Nôtre", itineraryDescription: "Une description t'as capté"},
-                {itineraryCategory: "culture", itineraryName: "Haussman", itineraryDescription: "Une description t'as capté"},
-               ],
-      mode: [
-              {itineraryCategory: "mode", itineraryName: "Jean-Paul Gaultier", itineraryDescription: "Une description t'as capté"},
-              {itineraryCategory: "mode", itineraryName: "Coco Chanel", itineraryDescription: "Une description t'as capté"},
-              {itineraryCategory: "mode", itineraryName: "Yves Saint Laurent", itineraryDescription: "Une description t'as capté"},
+    const [listPath, setListPath] = useState(
+        {
+            global: [
+                {type: "global", itineraryName: "Discover", itineraryDescription: "Enjoy the best local craftmanship", itineraryImg: "/images/ItineraryImage/Discover.png"},
+                {type: "global", itineraryName: "Paris Lover", itineraryDescription: "Live the “art de vivre à la Française”", itineraryImg: "/images/ItineraryImage/ParisLover.png"},
+                {type: "global", itineraryName: "Grand Tour", itineraryDescription: "Experience French luxury", itineraryImg: "/images/ItineraryImage/GrandTour.png"},
             ],
-      selfCare: [
-                  {itineraryCategory: "self-care", itineraryName: "Bio", itineraryDescription: "Une description t'as capté"},
-                  {itineraryCategory: "self-care", itineraryName: "I care", itineraryDescription: "Une description t'as capté"},
-                ],
-    },
-  );
+                        
+            foodAndDrinks: [
+                {type: "food & drinks", itineraryName: "Epicurian", itineraryDescription: "Find your way to some good local food", itineraryImg: "/images/ItineraryImage/Epicurian.jpg"},
+                {type: "food & drinks", itineraryName: "Gourmet", itineraryDescription: "Come across places to try French cuisine"},
+                {type: "food & drinks", itineraryName: "Signature", itineraryDescription: "Explore what France has best to offer "},
+            ],
+            culture: [
+                {type: "culture", itineraryName: "Van Gogh", itineraryDescription: "Une description t'as capté"},
+                {type: "culture", itineraryName: "Le Nôtre", itineraryDescription: "Une description t'as capté"},
+                {type: "culture", itineraryName: "Haussman", itineraryDescription: "Une description t'as capté"},
+            ],
+            mode: [
+                {type: "mode", itineraryName: "Jean-Paul Gaultier", itineraryDescription: "Une description t'as capté"},
+                {type: "mode", itineraryName: "Coco Chanel", itineraryDescription: "Une description t'as capté"},
+                {type: "mode", itineraryName: "Yves Saint Laurent", itineraryDescription: "Une description t'as capté"},
+            ],
+            selfCare: [
+                {type: "self-care", itineraryName: "Bio", itineraryDescription: "Une description t'as capté"},
+                {type: "self-care", itineraryName: "I care", itineraryDescription: "Une description t'as capté"},
+            ],
+        },
+    );
 
-  const [filters, setFilters] = useState([
-
-    {name :"Food & Drinks", category: listPath.foodAndDrinks, img:"/images/image-filter/food-drinks.png"},
-    {name :"Culture", category: listPath.culture, img:"/images/image-filter/culture.png"},
-    {name :"Mode", category: listPath.mode, img:"/images/image-filter/mode.png"},
-    {name :"Self-care", category: listPath.selfCare, img:"/images/image-filter/self-care.png"}
-
-  ]);
+    const [filters, setFilters] = useState(
+        [
+            {name :"Food & Drinks", category: listPath.foodAndDrinks, img:"/images/ImagesFilter/food-drinks.png"},
+            {name :"Culture", category: listPath.culture, img:"/images/ImagesFilter/culture.png"},
+            {name :"Mode", category: listPath.mode, img:"/images/ImagesFilter/mode.png"},
+            {name :"Self-care", category: listPath.selfCare, img:"/images/ImagesFilter/self-care.png"}
+        ]
+    );
 
 
   const [currentCategoryItineraries, setCurrentCategoryItineraries] = useState(listPath.global);
@@ -76,9 +76,10 @@ export default function ItineraryPage() {
             return (
               <ItineraryCard 
                 key={index}
-                type={item.itineraryCategory}
+                type={item.type}
                 itineraryName={item.itineraryName}
                 description={item.itineraryDescription}
+                image={item.itineraryImg}
                 // id={item.id}
               />
             )}

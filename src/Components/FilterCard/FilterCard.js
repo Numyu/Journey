@@ -11,7 +11,7 @@ export default function FilterCard(props) {
 
       
       <p className='filter-button-text'>{props.name}</p>
-      {/* <p className='filter-button-text'>La description de fou quoi</p> */}
+    
     </div>
   )
 }
