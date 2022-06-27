@@ -17,25 +17,25 @@ export default function MostViewed() {
       id: uuidv4(),
       title: "Eiffel Tower",
       classCard: "eiffel-tower-card",
-      img: "../../img/MostViewedImg/eiffel.png",
+      img: "eiffel.png",
     },
     {
       id: uuidv4(),
       title: "Louvre Museum",
       classCard: "louvre-museum-card",
-      img: "../../img/MostViewedImg/eiffel.png",
+      img: "louvre-museum.png",
+    },
+    {
+      id: uuidv4(),
+      title: "Sacré-Coeur’s Basilica",
+      classCard: "sacre-coeur-basilica",
+      img: "sacre-coeur-basilica.png",
     },
     {
       id: uuidv4(),
       title: "Triumph Arch",
       classCard: "triumph-arch-card",
-      img: "../../img/MostViewedImg/eiffel.png",
-    },
-    {
-      id: uuidv4(),
-      title: "Sacré-Coeur’s Basilica",
-      classCard: "sacre-coeurs-basilica",
-      img: "../../img/MostViewedImg/eiffel.png",
+      img: "triumph-arch.png",
     },
   ]);
 
@@ -54,17 +54,16 @@ export default function MostViewed() {
         <p className="subtitle">{subtitle}</p>
       </div>
       <div className="most-viewed-content">
-        {cardItem.map((card) => {
+        {cardItem.map(({id, title, classCard, img})=> {
           return (
             <GeneratedCard
-              key={card.id}
-              classCard={card.classCard}
-              img={card.img}
-              title={card.title}
+              key={id}
+              classCard={classCard}
+              img={process.env.PUBLIC_URL + "/images/MostViewedImg/" + img}
               NavFunc={navToItineraries}
-              id={card.id}
+              title={title}
             />
-          );
+          )
         })}
       </div>
     </>

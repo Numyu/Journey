@@ -1,29 +1,19 @@
-import React from 'react'
+import React from "react";
 
 
-
-export default function GeneratedCard(props) {
-
-
-    
-
-        
-  
-
-
- 
-    return (
-
-            <div className={props.classCard} id={props.id}>
-                <div className='card-mosaic' onClick={() => props.NavFunc(props.title)}>
-                    <button>
-                    </button>
-                    <h3>
-                        {props.title}
-                    </h3>
-                </div>
-
-            </div>
-
-    )
+export default function GeneratedCard({classCard, img, title, NavFunc}) {
+  const backGround = {
+    background:`no-repeat center url(${img})`,
+    backgroundSize: "cover"
+  }
+  return (
+    <div className={classCard}>
+      <div className="card-mosaic" onClick={() => NavFunc(title)}>
+        <button className="mostViewedBtn"
+          style={backGround} 
+        ></button>
+        <h3>{title}</h3>
+      </div>
+    </div>
+  );
 }

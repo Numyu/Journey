@@ -1,10 +1,10 @@
 .search-bar-form {
     display: flex;
     align-items: center;
-    margin: 43px 16px 0 16px;
-    width: 396px;
+    margin: 43px 39px 0 39px;
+    width: 350px;
     height: 40px;
-    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.10);
     border-radius: 4px;
     border: none;
 

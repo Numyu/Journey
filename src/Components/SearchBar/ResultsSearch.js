@@ -7,7 +7,7 @@ export default function ResultsSearch(props) {
       <div className="results-search">
         <button
           className="monuments-buttons"
-          id={props.id}
+          id={props.name}
           onClick={() => {
             props.navigate(props.id);
           }}

@@ -37,24 +37,19 @@ export default function SearchBar() {
   useEffect(() => {
     setStores(api);
   }, [stores]);
-
+  console.log(stores);
   useEffect(() => {
     const result = [];
     stores.forEach((element) => {
-      if (
-        element.fields.nom_du_commerce
-          .toLowerCase()
-          .includes(inputValue.toLowerCase())
-      ) {
-        result.push(element);
+      if (element.name.toLowerCase().includes(inputValue.toLowerCase())) {
+        result.push(element.monument);
         console.log(result);
-
       }
       if (inputValue === "") {
         result.pop();
       }
     });
-    setApiValue(result);
+    setApiValue(result.sort());
   }, [inputValue]);
 
   const take_value = (e) => {
@@ -81,12 +76,7 @@ export default function SearchBar() {
       <div className="autocomplete-results">
         {apiValue.map((item, index) => {
           return (
-            <ResultsSearch
-              key={index}
-              id={item.recordid}
-              name={item.fields.nom_du_commerce}
-              navigate={nav}
-            />
+            <ResultsSearch key={index} id={item} name={item} navigate={nav} />
           );
         })}
       </div>
