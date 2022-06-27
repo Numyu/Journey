@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./SearchBar.css";
-import data from "../../data/data.json";
+import api from "../../api/api.json";
 import ResultsSearch from "./ResultsSearch";
+
 
 export default function SearchBar() {
   const svg_magnifying_glass = (
@@ -34,7 +35,7 @@ export default function SearchBar() {
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
-    setStores(data);
+    setStores(api);
   }, [stores]);
 
   useEffect(() => {

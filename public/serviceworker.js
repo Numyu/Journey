@@ -1,11 +1,49 @@
-const CACHE_NAME = "cache-v4";
+const CACHE_NAME = "cache-v7";
 const filesToCache = [
   "/",
-  "./data/data.json",
+  "./api/api.json",
   "./images/logo.png",
   "./static/js/bundle.js",
-  ".manifest.json",
+  "./manifest.json",
   "./images/ArtisanCardIcones/trash.svg",
+  "./images/ArtisanCardImg/fromages-ramage.png",
+  "./images/ArtisanCardImg/au-virage-lepic.png",
+  "./images/ArtisanCardImg/maison-georges-larnicol.png",
+  "./images/ArtisanCardImg/du-vert-au-vin.png",
+  "./images/ArtisanCardImg/la-butte-fromagere.png",
+  "./images/ArtisanCardImg/pain-pain.png",
+  "./images/ArtisanCardImg/le-poulbot.png",
+  "./images/ArtisanCardImg/ame-et-esprit-du-vin.png",
+  "./images/ArtisanCardImg/patisserie-gilles-marchal.png",
+  "./images/ArtisanCardImg/la-cremaillere-1900.png",
+  "./images/ArtisanCardImg/chez-virginie-caulaincourt.png",
+  "./images/ArtisanCardImg/le-vin-au-vert.png",
+  "./images/ArtisanCardImg/jo.png",
+  "./images/ArtisanCardImg/le-slip-francais.png",
+  "./images/ArtisanCardImg/nina-kendosa.png",
+  "./images/ArtisanCardImg/telle-mere-telle-fille.png",
+  "./images/ArtisanCardImg/anoki.png",
+  "./images/ArtisanCardImg/sandro-homme.png",
+  "./images/ArtisanCardImg/maje.png",
+  "./images/ArtisanCardImg/atelier-de-famille.png",
+  "./images/ArtisanCardImg/apc-surplus.png",
+  "./images/ArtisanCardImg/musee-de-montmarte.png",
+  "./images/ArtisanCardImg/halle-saint-pierre.png",
+  "./images/ArtisanCardImg/maison-de-dalida.png",
+  "./images/ArtisanCardImg/square-louise-michel.png",
+  "./images/ArtisanCardImg/librairie-des-abbesses.png",
+  "./images/ArtisanCardImg/square-marcel-bleustein-blanchet.png",
+  "./images/ArtisanCardImg/square-nadar.png",
+  "./images/ArtisanCardImg/le-mur-des-je-t-aime.png",
+  "./images/ArtisanCardImg/place-du-tertre.png",
+  "./images/ArtisanCardImg/arene-de-montmartre.png",
+  "./images/ArtisanCardImg/le-bio-de-la-butte.png",
+  "./images/ArtisanCardImg/the-bon-the-bio.png",
+  "./images/ArtisanCardImg/la-rhumerie-parisienne.png",
+  "./images/ArtisanCardImg/au-bout-du-champ.png",
+  "./images/ArtisanCardImg/oh-my-cream.png",
+  "./images/ArtisanCardImg/yves-rocher.png",
+  "./images/ArtisanCardImg/au-bout-des-doigts.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -18,31 +56,18 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  // Quand il y a une requête faite sur internet...
-  // On répond toujours par nous même
   event.respondWith(
-    // On cherche d'abord dans le cache, s'il y a un fichier
-    // qui correspond à la requête
     caches.match(event.request).then((matchResponse) => {
-      // Si c'est le cas, on le renvoie directement
       if (matchResponse !== undefined) return matchResponse;
-
-      // Si c'est pas le cas, on n'a pas le fichier en cache !
-      // On fait une vraie requête...
-      return (
-        fetch(event.request)
-          // Si elle passe, on renvoie le fichier
-          .then((fetchResponse) => fetchResponse)
-          // Si elle plante, c'est dommage.
-          // Peut être qu'il n'y a pas internet ?
-          .catch(
-            () =>
-              new Response(null, {
-                status: 501,
-                statusText: "Service unavailable",
-              })
-          )
-      );
+      return fetch(event.request)
+        .then((fetchResponse) => fetchResponse)
+        .catch(
+          () =>
+            new Response(null, {
+              status: 501,
+              statusText: "Service unavailable",
+            })
+        );
     })
   );
 });

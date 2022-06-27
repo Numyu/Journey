@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
-import data from "../../data/data.json";
 import api from "../../api/api.json";
 
 export default function TourPage() {
