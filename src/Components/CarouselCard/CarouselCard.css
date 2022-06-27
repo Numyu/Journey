@@ -46,13 +46,9 @@
     background: rgb(238, 238, 238);
 }
 
-* {
-    margin: 0 7.3%;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  button{
+
+  /* button{
       border: none;
       display: flex;
       cursor: pointer;
-  }
+  } */
