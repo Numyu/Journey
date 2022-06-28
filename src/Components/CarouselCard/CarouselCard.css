@@ -35,20 +35,26 @@
 .inner-carousel {
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    /* background: rgb(238, 238, 238); */
+    margin-bottom: 10px;
 }
 
 .carousel{
     cursor: grab;
     overflow: hidden;
     width: 428px;
+    height: auto;
+    margin-bottom: 20px;
     /* background: rgb(238, 238, 238); */
 }
-
+.CardItemTitle{
+    font-size: 12px;
+}
 
 .btnViewMore{
       border: none;
       display: flex;
       cursor: pointer;
-} 
+      position: relative;
+      left: 330px;
+}
+
