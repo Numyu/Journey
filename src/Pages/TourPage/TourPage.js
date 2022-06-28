@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
-import api from "../../api/api.json";
+import api from "../../api/api-before.json";
 import CtaBack from "../../Components/CtaBack/CtaBack";
 import { useParams } from "react-router-dom";
 import "./TourPage.css"
@@ -14,10 +14,11 @@ export default function TourPage() {
     setStores(api);
   }, []);
 
+  console.log(api);
+
 
 
   const params = useParams()
-
 
 
   const deleteArtisanCard = (uuid) => {
@@ -87,10 +88,10 @@ export default function TourPage() {
             />
           )
         )}
-        {/* <CtaMaps 
-        
+        <CtaMaps
+        selectedItinerary={filteredStores}
         />
-         */}
+        
         
     </div>
   );
