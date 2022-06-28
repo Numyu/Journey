@@ -24,7 +24,7 @@ export default function TourPage() {
     const newStores = stores.filter((store) => {
       return store.uuid != uuid;
     });
-
+    setStores(newStores);
   };
 
 
@@ -39,8 +39,22 @@ export default function TourPage() {
 
   // const {address} = filteredStores
 
+  // const listAddress = []
 
-  
+  // for (const [index, value] of filteredStores.entries()) {
+  //   listAddress.push(value.address)
+  // }
+  // // console.log(listAddress);
+
+  // const listAddress = {}
+
+  // for (const [index, value] of filteredStores.entries()) {
+    
+  //   Object.assign(listAddress, {address: value.address })
+    
+  // }
+
+
   
   return (
     <div>
@@ -88,7 +102,9 @@ export default function TourPage() {
             />
           )
         )}
-
+        <CtaMaps 
+        listAddress={listAddress}
+        />
         
         
     </div>
