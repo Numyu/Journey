@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 
 export default function TourPage() {
   const [stores, setStores] = useState([]);
-  const [filteredStores, setFilteredStores] = useState([])
 
   useEffect(() => {
     setStores(api);
