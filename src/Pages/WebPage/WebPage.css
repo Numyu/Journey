@@ -1,0 +1,111 @@
+.WebPage {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0 90px;
+}
+
+.presentation {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.first-mockup {
+  width: 339px;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+span {
+  color: #ffb800;
+  font-weight: 900;
+}
+
+.experience {
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 3.2rem;
+  margin-bottom: 50px;
+}
+
+.experience p {
+  margin-bottom: 20px;
+}
+
+.application {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+.second-mockup {
+  width: 500px;
+  height: 600px;
+  margin-right: 20px;
+}
+
+#text {
+  margin-top: -50px;
+}
+
+.description {
+  display: grid;
+  max-width: 40ch;
+}
+
+.functionality {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1121px) {
+  .WebPage {
+    font-size: 1rem;
+    padding: 0 80px;
+  }
+
+  .first-mockup {
+    width: 280px;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .second-mockup {
+    width: 380px;
+    height: 460px;
+  }
+}
+
+@media screen and (max-width: 1121px) {
+  .WebPage {
+    font-size: 0.9rem;
+    padding: 0 80px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  #text {
+    margin-top: -20px;
+  }
+
+  .second-mockup {
+    width: 330px;
+    height: 400px;
+  }
+}
