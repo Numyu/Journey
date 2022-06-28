@@ -30,15 +30,10 @@ export default function TourPage() {
 
 
 
-
   const filteredStores = stores.filter((store) => {
 
       return store.path == params.tour
   })
-  const [address, setAdress] = useState(filteredStores);
-
-  // const {address} = filteredStores
-
 
   
   
