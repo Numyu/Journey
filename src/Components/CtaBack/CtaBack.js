@@ -8,7 +8,6 @@ export default function CtaBack(props) {
                     <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m26.006 8.513-24.944.112m6.502-7.517L1.153 8.64l6.659 7.413"/>
                   </svg>
 
-  console.log(props.valueLink);
   return (
     <div>
         <button className='cta-back' onClick={() => navigate(props.valueLink)}>{ctaBack} </button>

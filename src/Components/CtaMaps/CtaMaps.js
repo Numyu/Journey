@@ -1,7 +1,7 @@
 import React from 'react'
 import './CtaMaps.css'
 import { useState, useEffect } from 'react'
-export default function CtaMaps() {
+export default function CtaMaps({address}) {
     // Liste des adresses 
 
     const [waypoints, setWayPoints] = useState([

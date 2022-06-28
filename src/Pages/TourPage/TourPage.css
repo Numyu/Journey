@@ -1,0 +1,17 @@
+.tour-page-header {
+    font-family: articulat-cf, sans-serif;
+    margin: 0 16px 0 16px;
+}
+
+
+.tour-page-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tour-page-text {
+    margin: 19px 0 19px 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+

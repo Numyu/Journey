@@ -8,9 +8,6 @@ export default function ArtisanCard({
   shopDescription,
   openingHours,
   picture, 
-  onDrag,
-  onDragStart, 
-  onDragEnd,
   deleteArtisanCard,
   uuid
 }) {
@@ -36,10 +33,6 @@ export default function ArtisanCard({
           style={
             cardBackground
           }
-          draggable
-          onDrag={onDrag}
-          onDragStart={onDragStart}
-          onDragEnd={onDragEnd}
           onClick={toggledCardDescription}
         >
           <p className={cardToggled ? "artisan-opening-hours toggled" : "artisan-opening-hours"}>{openingHours}</p>

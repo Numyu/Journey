@@ -84,8 +84,8 @@ export default function ItineraryPage() {
 
         />
         {/* <button className='cta-back' onClick={() => navigate("/")}>{ctaBack} </button> */}
-        <h2 className='itinerary-page-title'>{params.monument}</h2>
-        <p className='itinerary-page-text'>Pick an itinary that suits you</p>
+        <h2 className='tour-page-title'>{params.monument}</h2>
+        <p className='tour-page-text'>Pick an itinary that suits you</p>
       </div>
 
       <ul className="itinerary-container">
