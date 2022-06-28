@@ -1,122 +1,116 @@
 .artisan-card {
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-    width: 396px;
-    height: 134px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    margin: 0px 16px 14px 16px;
-    font-family: articulat-cf,sans-serif;
-    font-style: normal;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 0px 0px 14px;
+  font-family: articulat-cf, sans-serif;
+  font-style: normal;
 }
+
 .artisan-card.toggled {
-    background: #fff;
-    height: auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  height: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 .artisan-card-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 14px;
-    gap: 40px;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: width 0.4s ease-in-out;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 14px;
+  gap: 40px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: width 0.4s ease-in-out;
 }
 
 .dragged {
-    width: 80%;
+  width: 80%;
 }
 
-/* J AI RAJOUTE ICI */
 .artisan-header-wrapper {
-    display: flex;
-    flex-direction: row;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  position: relative;
 }
 
 .artisan-card-delete {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 356px;
-    border-radius: 4px; 
+  width: 40px;
+  height: 40px;
+  margin-left: -40px;
+  border-radius: 4px;
 }
 
 .artisan-card-delete:hover {
-    background-color: #EA5E5E;
-    transition: ease-in-out 0.3s;
-
+  background-color: #ea5e5e;
+  transition: ease-in-out 0.3s;
 }
 
 .trash-icon {
-   padding: 10px;
+  padding: 10px;
 }
 
 .artisan-card-delete.toggled {
-    display: none;
-
+  display: none;
 }
 
-/* FIN DE L AJOUT CI DESSUS */
 .artisan-card-header.toggled {
-    border-radius: 4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
 }
 
 .artisan-opening-hours {
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .artisan-opening-hours.toggled {
-    display: none;
+  display: none;
 }
 
 .artisan-card-shop-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
 }
 
 .artisan-card-title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .artisan-card-detail {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .artisan-card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 7px;
-    width: 322px;
-    padding: 14px 0px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  width: auto;
+  padding: 14px;
 }
 
 .artisan-shop-description {
-    font-weight: 400;
-    line-height: 20px;
-    font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
 }
 
 .artisan-opening-hours-description {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 10px;
 }
