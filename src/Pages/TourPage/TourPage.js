@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
-import api from "../../api/api.json";
+import api from "../../api/api2.json";
 import CtaBack from "../../Components/CtaBack/CtaBack";
 import { useParams } from "react-router-dom";
 import "./TourPage.css"
@@ -9,16 +9,17 @@ import CtaMaps from "../../Components/CtaMaps/CtaMaps";
 export default function TourPage() {
   const [stores, setStores] = useState([]);
 
-
-  useEffect(() => {
-    setStores(api);
-  }, []);
-
-
-
   const params = useParams()
 
+  useEffect(() => {
+    setStores(api[0]["sacreCoeurBasillica"]["global"]);
+  }, []);
 
+  console.log("wewe = ", stores )
+
+  
+
+ 
 
   const deleteArtisanCard = (uuid) => {
     const newStores = stores.filter((store) => {
@@ -32,10 +33,15 @@ export default function TourPage() {
 
 
   const filteredStores = stores.filter((store) => {
-
-      return store.path == params.tour
+    // console.log("store = ", store)
+    return store.id == params.tour
+      // if (store.id == params.tour) {
+      //   return store.shops;
+      // }
   })
 
+
+  // console.log("params", filteredStores[0])
 
 
 
@@ -82,7 +88,7 @@ export default function TourPage() {
 
               deleteArtisanCard={deleteArtisanCard}
               picture={
-                process.env.PUBLIC_URL + "/images/ArtisanCardImg/" + image
+                process.env.PUBLIC_URL + "/images/img/" + image
               }
             />
           )

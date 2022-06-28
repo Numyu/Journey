@@ -12,7 +12,7 @@ function App() {
       <div className="mobile">
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/itineraries/:monument" element={<ItineraryPage />} />
+          <Route path="/itineraries/:monument:type" element={<ItineraryPage />} />
           <Route path="/itineraries/:monument/:tour" element={<TourPage />} />
         </Routes>
       </div>

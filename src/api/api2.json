@@ -1,0 +1,247 @@
+[
+    {
+       "sacreCoeurBasillica":  {
+        "global": [
+            {
+                "type": "global",
+                "name" : "Discovery",
+                "id": "discovery",
+                "description": "Enjoy the best local craftmanship",
+                "image": "global-discovery.png",
+                "shops":  [
+                    {
+                        "id":"1",
+                        "uuid":"journey_62b57964f208c",
+                        "name":"Fromages et Ramage",
+                        "address":"3 Rue Eug\u00e8ne Jumin, 75019 Paris",
+                        "path":"Epicurian",
+                        "description":"a typical cheese shop with atypical management in which the great classics (at reasonable prices) rub shoulders with smoked goats and sheep",
+                        "smallDescription":"a typical Parisian cheese factory",
+                        "image":"fromages-ramage.png",
+                        "monument":"Sacre-coeur's Basillica",
+                        "type":"Food and drinks",
+                        "opening":"10:00 - 20:00",
+                        "date":"2022-06-24"
+                      },
+                      {
+                        "id":"5",
+                        "uuid":"journey_62b57e8128bfe",
+                        "name":"La Butte Fromag\u00e8re",
+                        "address":"32 Rue des Abbesses, 75018 Paris",
+                        "path":"Gourmet",
+                        "description":"Enjoy the excellent products of this creamery-cheese factory. The products are selected from small producers and are carefully matured in the store's maturing cellar. There is something for everyone.",
+                        "smallDescription":"Famous cheese factory ",
+                        "image":"la-butte-fromagere.png",
+                        "monument":"Sacre-coeur's Basillica",
+                        "type":"Food and drinks",
+                        "opening":"07:00 - 20:00",
+                        "date":"2022-06-24"
+                      },
+                      {
+                        "id":"9",
+                        "uuid":"journey_62b582504721f",
+                        "name":"P\u00e2tisserie Gilles Marchal",
+                        "address":"9 Rue Ravignan, 75018 Paris",
+                        "path":"Signature",
+                        "description":"Traditional bakery serving light madeleines, pies, croissants and pastries.",
+                        "smallDescription":"Traditional bakery in the heart of Paris",
+                        "image":"patisserie-gilles-marchal.png",
+                        "monument":"Sacre-coeur's Basillica",
+                        "type":"Food and drinks",
+                        "opening":"08:30 - 19:00",
+                        "date":"2022-06-24"
+                      }
+                ]
+            },
+            {
+                "type": "global",
+                "name" : "Paris Lover",
+                "id": "paris-lover",
+                "description": "Live the “art de vivre à la Française”",
+                "image": "global-parislover.png",
+                "shops":  [
+                    {
+                        "id":"27",
+                        "uuid":"journey_62b5f4e229fcb",
+                        "name":"Halle Saint Pierre",
+                        "address":"2 Rue Ronsard, 75018 Paris",
+                        "path":"Van Gogh",
+                        "description":"Art museum with contemporary and experimental paintings, graphic art and avant-garde concerts.",
+                        "smallDescription":"Art museum",
+                        "image":"halle-saint-pierre.png",
+                        "monument":"Sacre-coeur's Basillica",
+                        "type":"art and culture",
+                        "opening":"11:00 - 19:00",
+                        "date":"2022-06-24"
+                      },
+                      {
+                        "id":"32",
+                        "uuid":"journey_62b5f67da7b05",
+                        "name":"Square Marcel Bleustein Blanchet",
+                        "address":"1 Rue de la Bonne, 75018 Paris",
+                        "path":"Le N\u00f4tre",
+                        "description":"Panoramic terraced garden with view of the city, amphitheater, playgrounds and shaded pond.",
+                        "smallDescription":"Panoramic terraced garden",
+                        "image":"square-marcel-bleustein-blanchet.png",
+                        "monument":"Sacre-coeur's Basillica",
+                        "type":"art and culture",
+                        "opening":"08:00 - 19:00",
+                        "date":"2022-06-24"
+                      },
+                      {
+                        "id":"41",
+                        "uuid":"journey_62b5f815853a6",
+                        "name":"Oh My Cream !",
+                        "address":"90 Rue des Martyrs, 75018 Paris",
+                        "path":"I care",
+                        "description":"Oh My Cream is the first beauty concept-store with expertise in skincare and skin care, combining a purist selection of the most cutting-edge brands with advice delivered by real experts.",
+                        "smallDescription":"Beauty concept-store",
+                        "image":"oh-my-cream.png",
+                        "monument":"Sacre-coeur's Basillica",
+                        "type":"Selfcare",
+                        "opening":"10:30 - 19:30",
+                        "date":"2022-06-24"
+                      }
+                ]
+            }
+
+        ],
+            "foodAndDrinks": [
+               {
+                    "type": "food & drinks",
+                    "name" : "Epicurian",
+                    "id": "epicurian",
+                    "description": "Find your way to some good local food",
+                    "image": "f&d-epicurian.png",
+                    "shops":  [
+                            {
+                                "id":"1",
+                                "uuid":"journey_62b57964f208c",
+                                "name":"Fromages et Ramage",
+                                "address":"3 Rue Eug\u00e8ne Jumin, 75019 Paris",
+                                "path":"Epicurian",
+                                "description":"a typical cheese shop with atypical management in which the great classics (at reasonable prices) rub shoulders with smoked goats and sheep",
+                                "smallDescription":"a typical Parisian cheese factory",
+                                "image":"fromages-ramage.png",
+                                "monument":"Sacre-coeur's Basillica",
+                                "type":"Food and drinks",
+                                "opening":"10:00 - 20:00",
+                                "date":"2022-06-24"
+                            },
+                            {
+                                "id":"2",
+                                "uuid":"journey_62b57a5374b7f",
+                                "name":"Au virage Lepic",
+                                "address":"61 Rue Lepic, 75018 Paris",
+                                "path":"Epicurian",
+                                "description":"a neighborhood restaurant for over 100 years, is a Montmartre institution. In a place full of history, parties and personalities that have created the reputation of the Lepic bend, we offer you a French menu, home-made.",
+                                "smallDescription":"a French card, home-made for over 100 years",
+                                "image":"au-virage-lepic.png",
+                                "monument":"Sacre-coeur's Basillica",
+                                "type":"Food and drinks",
+                                "opening":"12:00 - 00:00",
+                                "date":"2022-06-24"
+                            },
+                            {
+                                "id":"3",
+                                "uuid":"journey_62b57b92f2933",
+                                "name":"Maison Georges Larnicol",
+                                "address":"14 Rue de Rivoli, 75004 Paris",
+                                "path":"Epicurian",
+                                "description":"Georges Larnicol is not only famous for its Breton pastries, it also offers a wide range of chocolates. In the shape of a guitar, ladybugs, or simply in bars, their chocolates are all of superior quality.",
+                                "smallDescription":"a cookie factory and a chocolate factory impossible to miss in the heart of Paris",
+                                "image":"maison-georges-larnicol.png",
+                                "monument":"Sacre-coeur's Basillica",
+                                "type":"Food and drinks",
+                                "opening":"10:30 - 20:30",
+                                "date":"2022-06-24"
+                              },
+                              {
+                                "id":"4",
+                                "uuid":"journey_62b57dce93a37",
+                                "name":"Du vert au vin",
+                                "address":"6 Rue Ravignan, 75018 Paris",
+                                "path":"Epicurian",
+                                "description":"Wines made with respect for the terroir and biodiversity. A selection of beers from micro-brewers, ciders, spirits, local softs, coffees, books dedicated to wines and also articles from local craftsmen and designers.",
+                                "smallDescription":"This wine shop and bar offers organic and natural wines and a bistro menu with cold cuts and cheeses.",
+                                "image":"du-vert-au-vin.png",
+                                "monument":"Sacre-coeur's Basillica",
+                                "type":"Food and drinks",
+                                "opening":"11:00 - 19:30",
+                                "date":"2022-06-24"
+                              }
+
+                            
+                        ]
+                },
+                {
+                    "type": "food & drinks",
+                    "name" : "Gourmet",
+                    "id": "gourmet",
+                    "description": "Find your way to some good local food",
+                    "image": "f&d-gourmet.png",
+                    "shops":  [
+                        {
+                            "id":"5",
+                            "uuid":"journey_62b57e8128bfe",
+                            "name":"La Butte Fromag\u00e8re",
+                            "address":"32 Rue des Abbesses, 75018 Paris",
+                            "path":"Gourmet",
+                            "description":"Enjoy the excellent products of this creamery-cheese factory. The products are selected from small producers and are carefully matured in the store's maturing cellar. There is something for everyone.",
+                            "smallDescription":"Famous cheese factory ",
+                            "image":"la-butte-fromagere.png",
+                            "monument":"Sacre-coeur's Basillica",
+                            "type":"Food and drinks",
+                            "opening":"07:00 - 20:00",
+                            "date":"2022-06-24"
+                          },
+                          {
+                            "id":"6",
+                            "uuid":"journey_62b57f3d44e93",
+                            "name":"Pain Pain",
+                            "address":"88 Rue des Martyrs, 75018 Paris",
+                            "path":"Gourmet",
+                            "description":"a bakery and pastry shop created by S\u00e9bastien Mauvieux, elected best baguette in Paris in 2012.",
+                            "smallDescription":"bakery and pastry shop in the heart of Paris",
+                            "image":"pain-pain.png",
+                            "monument":"Sacre-coeur's Basillica",
+                            "type":"Food and drinks",
+                            "opening":"07:00 - 20:00",
+                            "date":"2022-06-24"
+                          },
+                          {
+                            "id":"7",
+                            "uuid":"journey_62b580746b4da",
+                            "name":"Le Poulbot",
+                            "address":"3 Rue Poulbot, 75018 Paris",
+                            "path":"Gourmet",
+                            "description":"French restaurant with a country fa\u00e7ade and rustic setting, with dark wood, antique fabrics and lace.",
+                            "smallDescription":"French speciality to enjoy with family or friends",
+                            "image":"le-poulbot.png",
+                            "monument":"Sacre-coeur's Basillica",
+                            "type":"Food and drinks",
+                            "opening":"12:00 - 22:30",
+                            "date":"2022-06-24"
+                          },
+                          {
+                            "id":"8",
+                            "uuid":"journey_62b5814fcab98",
+                            "name":"Ame et Esprit du Vin",
+                            "address":"22 Rue Cadet, 75009 Paris",
+                            "path":"Gourmet",
+                            "description":"Cellar and bar for wines and spirits, delicatessen. Selections of organic, biodynamic and natural wines",
+                            "smallDescription":"more than 500 different references of wines and champagnes",
+                            "image":"ame-et-esprit-du-vin.png",
+                            "monument":"Sacre-coeur's Basillica",
+                            "type":"Food and drinks",
+                            "opening":"11:00 - 23:00",
+                            "date":"2022-06-24"
+                          }
+                    ]
+                }
+            ]
+                
+
+       }
+    }
+]

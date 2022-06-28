@@ -37,7 +37,7 @@ export default function SearchBar() {
   useEffect(() => {
     setStores(api);
   }, [stores]);
-  console.log(stores);
+  // console.log(stores);
   useEffect(() => {
     const result = [];
     stores.forEach((element) => {
