@@ -5,8 +5,11 @@
 }
 
 body {
+  font-family: articulat-cf, sans-serif;
+}
+
+.mobile {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: articulat-cf,sans-serif;
 }
