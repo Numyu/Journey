@@ -35,24 +35,9 @@ export default function TourPage() {
 
       return store.path == params.tour
   })
-  const [address, setAdress] = useState(filteredStores);
 
-  // const {address} = filteredStores
 
-  // const listAddress = []
 
-  // for (const [index, value] of filteredStores.entries()) {
-  //   listAddress.push(value.address)
-  // }
-  // // console.log(listAddress);
-
-  // const listAddress = {}
-
-  // for (const [index, value] of filteredStores.entries()) {
-    
-  //   Object.assign(listAddress, {address: value.address })
-    
-  // }
 
 
   
@@ -102,10 +87,10 @@ export default function TourPage() {
             />
           )
         )}
-        <CtaMaps 
-        listAddress={listAddress}
-        />
+        {/* <CtaMaps 
         
+        />
+         */}
         
     </div>
   );

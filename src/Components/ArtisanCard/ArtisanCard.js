@@ -26,7 +26,9 @@ export default function ArtisanCard({
         <div
           className={
             cardToggled ? 'artisan-card-header toggled' : 'artisan-card-header'
+            
           }
+          style={cardBackground}
           onClick={toggledCardDescription}
         >
           <p

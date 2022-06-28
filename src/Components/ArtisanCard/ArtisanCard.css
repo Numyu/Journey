@@ -28,6 +28,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: width 0.4s ease-in-out;
+
 }
 
 .dragged {
