@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./SearchBar.css";
-import api from "../../api/api.json";
-import ResultsSearch from "./ResultsSearch";
-
+import React, { useState, useEffect } from 'react'
+import './SearchBar.css'
+import api from '../../api/api.json'
+import ResultsSearch from './ResultsSearch'
 
 export default function SearchBar() {
   const svg_magnifying_glass = (
@@ -28,34 +27,33 @@ export default function SearchBar() {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 
-  const [inputValue, setInputValue] = useState("");
-  const [apiValue, setApiValue] = useState([]);
-  const [stores, setStores] = useState([]);
+  const [inputValue, setInputValue] = useState('')
+  const [apiValue, setApiValue] = useState([])
+  const [stores, setStores] = useState([])
 
   useEffect(() => {
-    setStores(api);
-  }, [stores]);
+    setStores(api)
+  }, [stores])
   useEffect(() => {
-    const result = [];
+    const result = []
     stores.forEach((element) => {
       if (element.name.toLowerCase().includes(inputValue.toLowerCase())) {
-        result.push(element.monument);
+        result.push(element.monument)
       }
-      if (inputValue === "") {
-        result.pop();
+      if (inputValue === '') {
+        result.pop()
       }
-    });
-    setApiValue(result.sort());
-  }, [inputValue]);
+    })
+    setApiValue(result.sort())
+  }, [inputValue])
 
   const take_value = (e) => {
-    setInputValue(e);
-  };
+    setInputValue(e)
+  }
 
-  const nav = (id) => {
-  };
+  const nav = (id) => {}
 
   return (
     <>
@@ -70,12 +68,12 @@ export default function SearchBar() {
         <button className="magnifying-glass">{svg_magnifying_glass} </button>
       </form>
       <div className="autocomplete-results">
-        {apiValue.map((item, index) => {
+        {apiValue.slice(0, 1).map((item, index) => {
           return (
             <ResultsSearch key={index} id={item} name={item} navigate={nav} />
-          );
+          )
         })}
       </div>
     </>
-  );
+  )
 }
