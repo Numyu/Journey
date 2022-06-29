@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import './ItineraryPage.css'
 import { useParams } from 'react-router-dom'
 import CtaBack from '../../Components/CtaBack/CtaBack'
+import api from '../../api/api.json'
 
 export default function ItineraryPage() {
   const navigate = useNavigate()
@@ -15,21 +16,21 @@ export default function ItineraryPage() {
     global: [
       {
         type: 'global',
-        itineraryName: 'Discover',
+        itineraryName: 'Discovery',
         itineraryDescription: 'Enjoy the best local craftmanship',
-        itineraryImg: '/images/ItineraryImage/Discover.png',
+        itineraryImg: '/images/ItineraryImage/global-discovery.png',
       },
       {
         type: 'global',
         itineraryName: 'Paris Lover',
         itineraryDescription: 'Live the “art de vivre à la Française”',
-        itineraryImg: '/images/ItineraryImage/ParisLover.png',
+        itineraryImg: '/images/ItineraryImage/global-parislover.png',
       },
       {
         type: 'global',
         itineraryName: 'Grand Tour',
         itineraryDescription: 'Experience French luxury',
-        itineraryImg: '/images/ItineraryImage/GrandTour.png',
+        itineraryImg: '/images/ItineraryImage/global-grandtour.png',
       },
     ],
 
@@ -38,63 +39,74 @@ export default function ItineraryPage() {
         type: 'food & drinks',
         itineraryName: 'Epicurian',
         itineraryDescription: 'Find your way to some good local food',
-        itineraryImg: '/images/ItineraryImage/Epicurian.jpg',
+        itineraryImg: '/images/ItineraryImage/f&d-epicurian.png',
       },
       {
         type: 'food & drinks',
         itineraryName: 'Gourmet',
         itineraryDescription: 'Come across places to try French cuisine',
+        itineraryImg: '/images/ItineraryImage/f&d-gourmet.png',
       },
       {
         type: 'food & drinks',
         itineraryName: 'Signature',
         itineraryDescription: 'Explore what France has best to offer ',
+        itineraryImg: '/images/ItineraryImage/f&d-signature.png',
       },
     ],
     culture: [
       {
         type: 'culture',
         itineraryName: 'Van Gogh',
-        itineraryDescription: "Une description t'as capté",
+        itineraryDescription: 'Discover the French culture',
+        itineraryImg: '/images/ItineraryImage/culture-vangogh.png',
       },
       {
         type: 'culture',
         itineraryName: 'Le Nôtre',
-        itineraryDescription: "Une description t'as capté",
+        itineraryDescription: 'Stroll through these parks and enjoy the view',
+        itineraryImg: '/images/ItineraryImage/culture-lenotre.png',
       },
       {
         type: 'culture',
         itineraryName: 'Haussman',
-        itineraryDescription: "Une description t'as capté",
+        itineraryDescription: 'Visit these emblematic places',
+        itineraryImg: '/images/ItineraryImage/culture-haussman.png',
       },
     ],
     mode: [
       {
         type: 'mode',
-        itineraryName: 'Jean-Paul Gaultier',
-        itineraryDescription: "Une description t'as capté",
+        itineraryName: "Men's Paris style",
+        itineraryDescription: 'Discover a selection of stores for men',
+        itineraryImg: '/images/ItineraryImage/mode-jeanpaulgaultier.png',
       },
       {
         type: 'mode',
-        itineraryName: 'Coco Chanel',
-        itineraryDescription: "Une description t'as capté",
+        itineraryName: "Lady's Paris dressing",
+        itineraryDescription: 'Discover a selection of stores for women',
+        itineraryImg: '/images/ItineraryImage/mode-cocochanel.png',
       },
       {
         type: 'mode',
-        itineraryName: 'Yves Saint Laurent',
-        itineraryDescription: "Une description t'as capté",
+        itineraryName: 'Fancy Paris fashion',
+        itineraryDescription:
+          'Discover a selection of stores for men and women',
+        itineraryImg: '/images/ItineraryImage/mode-yvessaintlaurent.png',
       },
     ],
     selfCare: [
       {
         type: 'self-care',
         itineraryName: 'Bio',
-        itineraryDescription: "Une description t'as capté",
+        itineraryDescription: 'Come and taste good organic products',
+        itineraryImg: '/images/ItineraryImage/selfcare-bio.png',
       },
       {
         type: 'self-care',
         itineraryName: 'I care',
-        itineraryDescription: "Une description t'as capté",
+        itineraryDescription: 'Take a moment to relax',
+        itineraryImg: '/images/ItineraryImage/selfcare-icare.png',
       },
     ],
   })
@@ -138,10 +150,6 @@ export default function ItineraryPage() {
     navigate(`/itineraries/${params.monument}/${tour}`)
     console.log(tour)
   }
-
-  // const ctaBack = <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" fill="none" viewBox="0 0 28 18">
-  //                   <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m26.006 8.513-24.944.112m6.502-7.517L1.153 8.64l6.659 7.413"/>
-  //                 </svg>
 
   return (
     <div className="itinerary-page-container">

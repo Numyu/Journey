@@ -1,5 +1,5 @@
 .WebPage {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
   padding: 0 90px;
 }
@@ -22,7 +22,7 @@
 
 span {
   color: #ffb800;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .experience {

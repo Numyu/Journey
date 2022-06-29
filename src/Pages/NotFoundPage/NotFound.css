@@ -1,0 +1,15 @@
+.not-found-page-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.container-logo{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-not-found {
+    width: 200px;
+}

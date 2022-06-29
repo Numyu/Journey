@@ -1,4 +1,4 @@
-const CACHE_NAME = "cache-v7";
+const CACHE_NAME = "cache-v8";
 const filesToCache = [
   "/",
   "/images/logo.png",
@@ -42,6 +42,28 @@ const filesToCache = [
   "/images/ArtisanCardImg/oh-my-cream.png",
   "/images/ArtisanCardImg/yves-rocher.png",
   "/images/ArtisanCardImg/au-bout-des-doigts.png",
+  "/images/ImagesFilter/culture.svg",
+  "/images/ImagesFilter/food-drinks.svg",
+  "/images/ImagesFilter/mode.svg",
+  "/images/ImagesFilter/self-care.svg",
+  "/images/ItineraryImage/culture-haussman.png",
+  "/images/ItineraryImage/culture-lenotre.png",
+  "/images/ItineraryImage/culture-vangogh.png",
+  "/images/ItineraryImage/f&d-epicurian.png",
+  "/images/ItineraryImage/f&d-gourmet.png",
+  "/images/ItineraryImage/f&d-signature.png",
+  "/images/ItineraryImage/global-discovery.png",
+  "/images/ItineraryImage/global-grandtour.png",
+  "/images/ItineraryImage/global-parislover.png",
+  "/images/ItineraryImage/mode-cocochanel.png",
+  "/images/ItineraryImage/mode-jeanpaulgaultier.png",
+  "/images/ItineraryImage/mode-yvessaintlaurent.png",
+  "/images/ItineraryImage/selfcare-bio.png",
+  "/images/ItineraryImage/selfcare-icare.png",
+  "/images/MostViewedImg/eiffel.png",
+  "/images/MostViewedImg/louvre-museum.png",
+  "/images/MostViewedImg/sacre-coeur-basilica.png",
+  "/images/MostViewedImg/triumph-arch.png"
 ];
 
 self.addEventListener("install", (event) => {

@@ -1,17 +1,27 @@
 .tour-page-header {
-    font-family: articulat-cf, sans-serif;
-
+  font-family: articulat-cf, sans-serif;
+  position: sticky;
 }
 
-
 .tour-page-title {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .tour-page-text {
-    margin: 19px 0 19px 0;
-    font-size: 14px;
-    font-weight: normal;
+  margin: 19px 0 19px 0;
+  font-size: 14px;
+  font-weight: normal;
 }
 
+.cards-container {
+  overflow: scroll;
+  height: 610px;
+}
+
+.tour-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
