@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ArtisanCard from '../../Components/ArtisanCard/ArtisanCard'
-import api from '../../api/api-before.json'
+import api from '../../api/api.json'
 import CtaBack from '../../Components/CtaBack/CtaBack'
 import { useParams } from 'react-router-dom'
 import './TourPage.css'
