@@ -57,9 +57,6 @@ export default function CarouselCard() {
 
   useEffect(() => {
     setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-
-  useEffect(() => {
     setwidth(carousel.current.scrollHeight - carousel.current.offsetHeight);
   }, []);
 
@@ -88,7 +85,7 @@ export default function CarouselCard() {
   return (
     <div>
       <motion.div ref={carousel} className="carousel">
-        <button className="btnViewMore" onClick={changeXY}>
+        <button className="btn-view-more" onClick={changeXY}>
           View more
         </button>
         <motion.div
@@ -112,6 +109,9 @@ export default function CarouselCard() {
             })}
         </motion.div>
       </motion.div>
+      <h1 className="test">
+        
+      </h1>
     </div>
   );
 }

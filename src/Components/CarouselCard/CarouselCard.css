@@ -36,17 +36,21 @@
     margin-bottom: 20px;
 }
 .card-item-title {
+    font-size: 10px;
     font-family: articulat-cf, sans-serif;
-    font-weight: 400;
+    font-weight: 800;
     font-style: normal;
-    font-size: 14px;
 }
 
-.btnViewMore{
-      border: none;
-      display: flex;
-      cursor: pointer;
-      position: relative;
-      left: 330px;
+.btn-view-more{
+    font-size: 10px;
+    font-family: articulat-cf, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    left: 330px;
 }
 
