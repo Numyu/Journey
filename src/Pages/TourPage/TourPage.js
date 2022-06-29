@@ -27,7 +27,7 @@ export default function TourPage() {
   })
 
   return (
-    <div>
+    <div className="tour-container">
       <div className="tour-page-header">
         <CtaBack valueLink={`/itineraries/${params.monument}`} />
         {/* <button className='cta-back' onClick={() => navigate("/")}>{ctaBack} </button> */}
@@ -35,31 +35,35 @@ export default function TourPage() {
         <p className="tour-page-text">Personalize your itinerary</p>
       </div>
 
-      {filteredStores.map(
-        ({
-          uuid,
-          name,
-          smallDescription,
-          opening,
-          description,
-          type,
-          image,
-        }) => (
-          <ArtisanCard
-            key={uuid}
-            uuid={uuid}
-            shopName={name}
-            shopDetail={smallDescription}
-            openingHours={opening}
-            shopDescription={
-              description ? description : "Il n'y a pas de description"
-            }
-            type_de_commerce={type}
-            deleteArtisanCard={deleteArtisanCard}
-            picture={process.env.PUBLIC_URL + '/images/ArtisanCardImg/' + image}
-          />
-        ),
-      )}
+      <div className="cards-container">
+        {filteredStores.map(
+          ({
+            uuid,
+            name,
+            smallDescription,
+            opening,
+            description,
+            type,
+            image,
+          }) => (
+            <ArtisanCard
+              key={uuid}
+              uuid={uuid}
+              shopName={name}
+              shopDetail={smallDescription}
+              openingHours={opening}
+              shopDescription={
+                description ? description : "Il n'y a pas de description"
+              }
+              type_de_commerce={type}
+              deleteArtisanCard={deleteArtisanCard}
+              picture={
+                process.env.PUBLIC_URL + '/images/ArtisanCardImg/' + image
+              }
+            />
+          ),
+        )}
+      </div>
       <CtaMaps selectedItinerary={filteredStores} />
     </div>
   )

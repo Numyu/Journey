@@ -406,6 +406,20 @@
     "date": "2022-06-24"
   },
   {
+    "id": "30",
+    "uuid": "journey_62b5f584b21a4",
+    "name": "Square Jehan Rictus",
+    "address": "14 Pl. des Abbesses, 75018 Paris",
+    "path": "Le N\u00f4tre",
+    "description": "Jehan-Rictus Square is a green space in the 18ᵉ arrondissement of Paris.",
+    "smallDescription": "Garden overlooking the city",
+    "image": "square-jehan-rictus.png",
+    "monument": "Sacre-coeur's Basillica",
+    "type": "art and culture",
+    "opening": "08:00 - 17:30",
+    "date": "2022-06-24"
+  },
+  {
     "id": "32",
     "uuid": "journey_62b5f67da7b05",
     "name": "Square Marcel Bleustein Blanchet",
