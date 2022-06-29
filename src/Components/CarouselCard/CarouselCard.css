@@ -8,16 +8,6 @@
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
-.TitleCarouselCard {
-    font-family: 'Articulat CF';
-    font-style: Bold;
-    font-size: 12px;
-    Line-height: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-
 .item {
     width: 100px;
     height: 100px;
@@ -44,10 +34,12 @@
     width: 428px;
     height: auto;
     margin-bottom: 20px;
-    /* background: rgb(238, 238, 238); */
 }
-.CardItemTitle{
-    font-size: 12px;
+.card-item-title {
+    font-family: articulat-cf, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
 }
 
 .btnViewMore{
