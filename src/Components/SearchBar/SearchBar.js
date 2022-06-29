@@ -37,13 +37,11 @@ export default function SearchBar() {
   useEffect(() => {
     setStores(api);
   }, [stores]);
-  console.log(stores);
   useEffect(() => {
     const result = [];
     stores.forEach((element) => {
       if (element.name.toLowerCase().includes(inputValue.toLowerCase())) {
         result.push(element.monument);
-        console.log(result);
       }
       if (inputValue === "") {
         result.pop();
@@ -57,8 +55,6 @@ export default function SearchBar() {
   };
 
   const nav = (id) => {
-    // Retourne l'id de l'élément séléctionné
-    console.log(id);
   };
 
   return (
