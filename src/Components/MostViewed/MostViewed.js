@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import GeneratedCard from "./GeneratedCard";
 import "./MostViewed.css";
+import { useNavigate } from 'react-router-dom'
 
 export default function MostViewed() {
+
+  const navigate = useNavigate();
   // Titre et sous-titre de la section 'Most Viewed'
   const title = "Where are we going?";
   const subtitle = "Are you visiting one of these places?";
@@ -37,6 +40,12 @@ export default function MostViewed() {
   ]);
 
 
+  const navToItineraries = monument => {
+ 
+    navigate(`/itineraries/${monument}`)
+    console.log(monument);
+
+}
 
   return (
     <>
@@ -51,6 +60,7 @@ export default function MostViewed() {
               key={id}
               classCard={classCard}
               img={process.env.PUBLIC_URL + "/images/MostViewedImg/" + img}
+              NavFunc={navToItineraries}
               title={title}
             />
           )

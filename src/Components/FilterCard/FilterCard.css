@@ -1,42 +1,39 @@
 .filter-button {
-    width: 25%;
-    min-width: 20%;
-    height: 167px;
-    /* margin: 16px; */
-    
-    border-radius: 4px;
+  width: 25%;
+  min-width: 20%;
+  height: 167px;
 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: articulat-cf,sans-serif;
-    background: #FFFFFF;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);    
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: articulat-cf, sans-serif;
+  background: #ffffff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .filter-button:hover {
-    cursor: pointer;
-    border:2px solid darkslategray;
+  cursor: pointer;
+  outline: 2px solid #ffb800;
 }
 
 #filter-button-image {
-    width: 50px;
-    height: 50px;
-    
-    justify-self: center;
-    margin: 46px 18px 24px 18px;
+  width: 50px;
+  height: 50px;
+
+  justify-self: center;
+  margin: 46px 18px 24px 18px;
 }
 
 .filter-button-text {
-    font-family: articulat-cf,sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-    margin: 0px 5px;
-    text-align: center;
+  font-family: articulat-cf, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0px 5px;
+  text-align: center;
 }
-
-
 
 /* Mobile M */
 
@@ -45,7 +42,7 @@
     /* .itinerary-card {
         height: 110px;
     } */
-    /* .filter-button {
+/* .filter-button {
         height: 140px;
     }
 
@@ -59,7 +56,6 @@
     
     }  */
 
-    
 /* }  */
 
 /* Mobile S */

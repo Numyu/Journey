@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import ArtisanCard from "../../Components/ArtisanCard/ArtisanCard";
-import api from "../../api/api.json";
+import api from "../../api/api-before.json";
+import CtaBack from "../../Components/CtaBack/CtaBack";
+import { useParams } from "react-router-dom";
+import "./TourPage.css"
+import CtaMaps from "../../Components/CtaMaps/CtaMaps";
 
 export default function TourPage() {
   const [stores, setStores] = useState([]);
+
 
   useEffect(() => {
     setStores(api);
@@ -11,40 +16,10 @@ export default function TourPage() {
 
   console.log(api);
 
-  const [mouseStartPos, setMouseStartPos] = useState({});
-  const [mousePos, setMousePos] = useState({});
-  const [isDragged, setIsDragged] = useState(false);
 
-  const dragGap = 35;
 
-  const dragStartItem = (e) => {
-    setMouseStartPos({ mouseX: e.clientX, mouseY: e.clientY });
-  };
+  const params = useParams()
 
-  const dragEndItem = (e) => {
-    // e.target.classList.remove("dragged");
-    setMouseStartPos({ mouseX: e.clientX, mouseY: e.clientY });
-  };
-
-  const dragItem = (e) => {
-    if (isDragged) {
-      e.target.classList.add("dragged");
-    }
-    setMousePos({ mouseX: e.clientX, mouseY: e.clientY });
-  };
-
-  useEffect(() => {
-    if (mouseStartPos && mousePos.mouseX != 0) {
-      if (
-        mouseStartPos.mouseX > mousePos.mouseX &&
-        mouseStartPos.mouseX - mousePos.mouseX > dragGap
-      ) {
-        setIsDragged(true);
-      }
-    } else {
-      setIsDragged(false);
-    }
-  }, [mousePos]);
 
   const deleteArtisanCard = (uuid) => {
     const newStores = stores.filter((store) => {
@@ -53,10 +28,37 @@ export default function TourPage() {
     setStores(newStores);
   };
 
+
+
+
+
+  const filteredStores = stores.filter((store) => {
+
+      return store.path == params.tour
+  })
+
+
+
+
+
+  
   return (
     <div>
-      {stores
-        // .slice(0,2)
+
+      <div className='tour-page-header'>
+        <CtaBack
+    
+        valueLink={`/itineraries/${params.monument}`}
+          
+        />  
+        {/* <button className='cta-back' onClick={() => navigate("/")}>{ctaBack} </button> */}
+        <h2 className='tour-page-title'>{params.tour}</h2>
+        <p className='tour-page-text'>Personalize your itinerary</p>
+      </div>
+      
+
+
+      {filteredStores
         .map(
           ({
             uuid,
@@ -65,7 +67,8 @@ export default function TourPage() {
             opening,
             description,
             type,
-            image,
+            image
+            
           }) => (
             <ArtisanCard
               key={uuid}
@@ -77,9 +80,7 @@ export default function TourPage() {
                 description ? description : "Il n'y a pas de description"
               }
               type_de_commerce={type}
-              draggable
-              onDrag={dragItem}
-              onDragStart={dragStartItem}
+
               deleteArtisanCard={deleteArtisanCard}
               picture={
                 process.env.PUBLIC_URL + "/images/ArtisanCardImg/" + image
@@ -87,6 +88,11 @@ export default function TourPage() {
             />
           )
         )}
+        <CtaMaps
+        selectedItinerary={filteredStores}
+        />
+        
+        
     </div>
   );
 }
