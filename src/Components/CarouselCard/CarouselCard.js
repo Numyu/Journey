@@ -67,17 +67,21 @@ export default function CarouselCard() {
     left: -width,
   });
   const [wrap, setWrap] = useState({});
-  function changeXY(event) {
+  function changeXY() {
     setVisible((prevValue) => prevValue + 6);
 
+    console.log(width);
+    console.log(height);
+    console.log(carousel);
+
     if (slider === "y") {
-      setSlider((drag) => (drag = "x"));
+      setSlider("x");
       setSliderDirection({ right: 0, left: -width });
       setWrap({});
     } else {
-      setSlider((drag) => (drag = "y"));
+      setSlider("y");
       setSliderDirection({ top: 0, bottom: -height });
-      setWrap({ flexWrap: "wrap" });
+      setWrap({ flexWrap: "wrap", transform: "none" });
       setwidth(0);
     }
   }
@@ -94,24 +98,19 @@ export default function CarouselCard() {
           className="inner-carousel"
           style={wrap}
         >
-          {cardCarousel
-            .slice(0, visible)
-            .map(({ id, title, img }) => {
-              return (
-                <motion.div className="item"
-                key={id}>
-                  <img
-                    src={process.env.PUBLIC_URL + "/images/CarouselImg/" + img}
-                  />
-                  <p className="card-item-title">{title}</p>
-                </motion.div>
-              );
-            })}
+          {cardCarousel.slice(0, visible).map(({ id, title, img }) => {
+            return (
+              <motion.div className="item" key={id}>
+                <img
+                  src={process.env.PUBLIC_URL + "/images/CarouselImg/" + img}
+                />
+                <p className="card-item-title">{title}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </motion.div>
-      <h1 className="test">
-        
-      </h1>
+      <h1 className="test"></h1>
     </div>
   );
 }
