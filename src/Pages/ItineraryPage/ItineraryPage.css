@@ -7,7 +7,7 @@
 }
 
 .cta-back {
-  margin: 50px 0 32px 0;
+  margin: 40px 0 20px 0;
   background: none;
   border: none;
 }
@@ -15,16 +15,17 @@
 .itinerary-page-title {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .itinerary-page-text {
-  margin: 19px 0 19px 0;
+  margin: 0 0 15px;
   font-size: 14px;
   font-weight: normal;
 }
 
 .filter-title {
-  margin: 15px 0 34px 0;
+  margin: 15px 0 15px 0;
 }
 
 .filters-section {
@@ -33,7 +34,7 @@
   position: sticky;
   bottom: 0;
   background-color: white;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 }
 
 .filters-wrapper {

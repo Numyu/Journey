@@ -10,6 +10,10 @@ body {
   font-family: articulat-cf, sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .mobile {
   display: flex;
   justify-content: center;
