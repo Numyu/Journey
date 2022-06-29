@@ -56,8 +56,8 @@ export default function CarouselCard() {
   ]);
 
   useEffect(() => {
-    setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-    setwidth(carousel.current.scrollHeight - carousel.current.offsetHeight);
+    // setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    // setwidth(carousel.current.scrollHeight - carousel.current.offsetHeight);
   }, []);
 
   const [visible, setVisible] = useState(6);
@@ -67,22 +67,19 @@ export default function CarouselCard() {
     left: -width,
   });
   const [wrap, setWrap] = useState({});
+
+
   function changeXY() {
     setVisible((prevValue) => prevValue + 6);
 
-    console.log(width);
-    console.log(height);
-    console.log(carousel);
-
     if (slider === "y") {
       setSlider("x");
-      setSliderDirection({ right: 0, left: -width });
+      setSliderDirection({ right: 0, left: -width});
       setWrap({});
     } else {
       setSlider("y");
-      setSliderDirection({ top: 0, bottom: -height });
-      setWrap({ flexWrap: "wrap", transform: "none" });
-      setwidth(0);
+      setSliderDirection({ top: 0, bottom: -height});
+      setWrap({ flexWrap: "wrap", translateX: "unset"}); 
     }
   }
 
